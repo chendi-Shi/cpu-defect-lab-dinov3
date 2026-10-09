@@ -1,0 +1,11 @@
+{
+  "protocol_sha256": "60fcba9ccae7513607cdcd76f6a0d9227f4d1fb7df3f631c87ed5b66ac88675f",
+  "csv_sha256": "c9510d63f2b77bd1e10c67a3d600e7cb6d7a655c180a61a33d599b23e0a43e4c",
+  "split_sha256": "da7a28cb413031654b0161dab0473b560cf36a7f03f7c25b49395295eaf54ccf",
+  "normalization_sha256": "3030faca327fff4e25db6635162780d280dd2c03fb269a6ba087e8cf9acdf747",
+  "feature_keys": {
+    "raw224": "e2baf1b26013d1fdd1d145ae13ae99d8",
+    "raw336": "19d7902ad0f917bb65266122abb8282a",
+    "aligned224": "061631b9fc24c912c47da2fc5efdf346"
+  }
+}

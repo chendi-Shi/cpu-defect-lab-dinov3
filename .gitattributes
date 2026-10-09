@@ -1,0 +1,7 @@
+# Preserve byte hashes used by frozen experiment and model manifests.
+*.py -text
+*.json -text
+*.csv -text
+*.png binary
+*.jpg binary
+*.jpeg binary

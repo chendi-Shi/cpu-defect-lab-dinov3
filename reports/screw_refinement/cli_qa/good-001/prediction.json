@@ -1,0 +1,38 @@
+{
+  "score": 0.9402217811962185,
+  "threshold": 1.0882154040701584,
+  "anomalous": false,
+  "candidate": "raw336",
+  "branch": "raw336",
+  "geometry_diagnostics": {
+    "used": false,
+    "version": "otsu-lcc-pca-head-width-256-axis-bbox-v2"
+  },
+  "preprocessing_ms": 145.2964000054635,
+  "forward_ms": 1013.1776999915019,
+  "scoring_ms": 445.87939999473747,
+  "total_inference_ms": 1604.5664999983273,
+  "per_view_timings": {
+    "raw336": {
+      "forward_ms": 1013.1645999936154,
+      "size": 336,
+      "radius": 4,
+      "scoring_ms": 445.81489999836776
+    }
+  },
+  "model_sha256": "a1b7a9956a8282f726bd0e3fcf8bea78dcfe2cbc39c95934ef2a599ced6ec7bf",
+  "heatmap_note": "Anomaly scores are median-normalized feature distances, not probabilities. Heatmap colors are scaled separately for each image and cannot be compared across images. Single-view scores use the maximum patch distance, so an interpolated heatmap maximum can differ. Aligned heatmaps are mapped back into original 224 coordinates; inverse interpolation can lower their maximum without changing the image score.",
+  "timing_note": "Resident-model inference; includes preprocessing/forward/scoring, excludes model loading and PNG rendering.",
+  "category_note": "Screw-only engine; it does not identify other products or reject unknown categories.",
+  "heatmap_range": {
+    "min": 0.4396563172340393,
+    "max": 0.9332640767097473,
+    "color_scale": "Per-image min/max; not probabilities"
+  },
+  "files": {
+    "original": ".\\reports\\screw_refinement\\cli_qa\\good-001\\original.png",
+    "heatmap": ".\\reports\\screw_refinement\\cli_qa\\good-001\\heatmap.png",
+    "overlay": ".\\reports\\screw_refinement\\cli_qa\\good-001\\overlay.png"
+  },
+  "image": ".\\data\\mvtec\\screw\\test\\good\\001.png"
+}

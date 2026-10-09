@@ -7,15 +7,7 @@
   "catalog": {
     "count": 7,
     "default": "dinov3-bottle",
-    "models": [
-      "dinov3-bottle",
-      "dinov3-screw",
-      "dinov3-hazelnut",
-      "dinov3-metal_nut",
-      "dinov3-auto",
-      "bottle",
-      "screw"
-    ]
+    "models": ["dinov3-bottle", "dinov3-screw", "dinov3-hazelnut", "dinov3-metal_nut", "dinov3-auto", "bottle", "screw"]
   },
   "checks": [
     "Reloaded new server; all five DINOSaur options and two ResNet18 baselines visible",
@@ -60,11 +52,7 @@
     "threshold": 1.9396125078201294,
     "anomalous": true,
     "output_directory": "reports/frontier_cli_smoke",
-    "outputs": [
-      "original.png",
-      "heatmap.png",
-      "prediction.json"
-    ]
+    "outputs": ["original.png", "heatmap.png", "prediction.json"]
   },
   "console_errors": [],
   "screenshot": "reports/FRONTIER_DEMO_SCREENSHOT.jpg",

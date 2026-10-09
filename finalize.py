@@ -41,9 +41,15 @@ def source_archive():
                                                          'delivery', '__pycache__', '.git'}
                     and p.suffix != '.pyc'):
                 if p.suffix == '.json':
-                    content = json.dumps(portable(json.loads(p.read_text(encoding='utf-8'))),
-                                         ensure_ascii=False, indent=2)
-                    z.writestr(str(Path('cpu-defect-lab') / relative), content)
+                    parsed = json.loads(p.read_text(encoding='utf-8'))
+                    public = portable(parsed)
+                    if public == parsed:
+                        # Already-portable evidence has recorded byte hashes.
+                        # Preserve those bytes, including its final newline.
+                        z.write(p, Path('cpu-defect-lab') / relative)
+                    else:
+                        content = json.dumps(public, ensure_ascii=False, indent=2)
+                        z.writestr(str(Path('cpu-defect-lab') / relative), content)
                 else:
                     z.write(p, Path('cpu-defect-lab') / relative)
     return archive

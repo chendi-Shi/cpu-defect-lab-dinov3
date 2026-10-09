@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "recorded_at_utc": "2026-10-09T07:40:27.054787+00:00",
+  "experiment": "screw-refinement-v1",
+  "source_files": [
+    {
+      "path": "screw_refine.py",
+      "sha256": "1226eee5064edb5a0f99b51af46c3a585ac714646537ccf22903254225c5c364",
+      "bytes": 31763,
+      "crlf_count": 0,
+      "lf_count": 593,
+      "unchanged_since_first_audit": true,
+      "protocol_hash_key": "proxy_generator_source_sha256"
+    },
+    {
+      "path": "screw_geometry.py",
+      "sha256": "a411cc6883f47ce0e5a1218184dca955bf19a72f8a8b17a8b52cc4315f167a60",
+      "bytes": 12008,
+      "crlf_count": 0,
+      "lf_count": 261,
+      "unchanged_since_first_audit": true,
+      "protocol_hash_key": "geometry_source_sha256"
+    },
+    {
+      "path": "refine_features.py",
+      "sha256": "c36ea7dd1eb770b524cf9b5b90d35e12b8de8fda536c3a1260b86269aee864d2",
+      "bytes": 14624,
+      "crlf_count": 0,
+      "lf_count": 305,
+      "unchanged_since_first_audit": true,
+      "protocol_hash_key": "runtime_source_sha256"
+    },
+    {
+      "path": "frontier_core.py",
+      "sha256": "921a1e9bf7b5ed394b747730bb333f7066a6d637dd70bfeacd9b39d06e2d63a4",
+      "bytes": 9470,
+      "crlf_count": 0,
+      "lf_count": 212,
+      "unchanged_since_first_audit": true,
+      "protocol_hash_key": null
+    },
+    {
+      "path": "frontier.py",
+      "sha256": "703fe91eabb2c94b347a23102213f68bdaefa884dd13297da1dd8616d11ed3de",
+      "bytes": 17142,
+      "crlf_count": 0,
+      "lf_count": 292,
+      "unchanged_since_first_audit": true,
+      "protocol_hash_key": null
+    },
+    {
+      "path": "metrics.py",
+      "sha256": "cbb43acab190bece5743a27277c823b638f2f703071eb3f3540ed0e049f13694",
+      "bytes": 1459,
+      "crlf_count": 0,
+      "lf_count": 35,
+      "unchanged_since_first_audit": true,
+      "protocol_hash_key": null
+    }
+  ],
+  "source_hashes": {
+    "screw_refine.py": "1226eee5064edb5a0f99b51af46c3a585ac714646537ccf22903254225c5c364",
+    "screw_geometry.py": "a411cc6883f47ce0e5a1218184dca955bf19a72f8a8b17a8b52cc4315f167a60",
+    "refine_features.py": "c36ea7dd1eb770b524cf9b5b90d35e12b8de8fda536c3a1260b86269aee864d2",
+    "frontier_core.py": "921a1e9bf7b5ed394b747730bb333f7066a6d637dd70bfeacd9b39d06e2d63a4",
+    "frontier.py": "703fe91eabb2c94b347a23102213f68bdaefa884dd13297da1dd8616d11ed3de",
+    "metrics.py": "cbb43acab190bece5743a27277c823b638f2f703071eb3f3540ed0e049f13694"
+  },
+  "protocol_sha256": "60fcba9ccae7513607cdcd76f6a0d9227f4d1fb7df3f631c87ed5b66ac88675f",
+  "scope": "All six algorithm source dependencies matched the preceding independent read-only audit. Three are explicit protocol fields; three supplementary dependency fingerprints are not retroactively inserted into the frozen protocol.",
+  "no_algorithm_files_modified": true
+}

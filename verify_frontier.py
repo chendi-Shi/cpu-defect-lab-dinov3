@@ -99,7 +99,8 @@ def main():
         model_bytes, _ = get('/api/models')
         catalog = json.loads(model_bytes)
         expected_ids = {'dinov3-'+category for category in CATEGORIES} | {'dinov3-auto', 'bottle', 'screw'}
-        assert {entry['id'] for entry in catalog} == expected_ids
+        actual_ids = {entry['id'] for entry in catalog}
+        assert expected_ids <= actual_ids and actual_ids <= expected_ids | {'screw-refined'}
         checks.append('Four DINOSaur categories, automatic routing and two legacy baselines listed')
         prototypes = {category: model['prototype'] for category, model in released.items()}
         for category in CATEGORIES:

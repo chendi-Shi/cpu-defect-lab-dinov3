@@ -55,10 +55,15 @@ class Engine:
         self.prototypes = {}
         self.frontier_manifest = None
         self.dino_extractor = None
+        self.refined_engine = None
+        self.refined_manifest = None
         manifest_path = release / 'frontier' / 'manifest.json'
         if manifest_path.is_file():
             self._load_frontier(release, manifest_path)
-        if not self.models and not self.frontier_models:
+        refinement_path = release / 'screw_refinement' / 'manifest.json'
+        if refinement_path.is_file():
+            self._load_refined(release, refinement_path)
+        if not self.models and not self.frontier_models and self.refined_engine is None:
             raise ValueError('No released models. Run finalize.py or frontier_report.py after experiments.')
         self.extractor = Extractor(224) if self.models else None
         self.lock = threading.Lock()
@@ -106,6 +111,44 @@ class Engine:
         self.dino_score = score_features
         self.choose_task = choose_task
 
+    def _load_refined(self, release, manifest_path):
+        manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
+        if (not isinstance(manifest, dict) or manifest.get('status') != 'experimental'
+                or not isinstance(manifest.get('model'), str)):
+            raise ValueError('Invalid experimental screw-refinement manifest.')
+        expected = (release / 'screw_refinement' / 'model.pt').resolve()
+        declared = (release.parent / manifest['model']).resolve()
+        if declared != expected or release not in expected.parents:
+            raise ValueError('Invalid screw-refinement release model path.')
+        model_sha = manifest.get('model_sha256')
+        if (not isinstance(model_sha, str) or len(model_sha) != 64
+                or not expected.is_file()
+                or hashlib.sha256(expected.read_bytes()).hexdigest() != model_sha):
+            raise ValueError('Screw-refinement release hash mismatch.')
+        metrics = manifest.get('test_metrics')
+        if (not isinstance(metrics, dict)
+                or any(isinstance(metrics.get(key), bool) or not isinstance(metrics.get(key), int)
+                       or metrics[key] < 0 for key in ('tp', 'fp', 'fn', 'tn'))
+                or isinstance(metrics.get('image_auroc'), bool)
+                or not isinstance(metrics.get('image_auroc'), (int, float))
+                or not math.isfinite(metrics['image_auroc'])
+                or not 0 <= metrics['image_auroc'] <= 1):
+            raise ValueError('Invalid screw-refinement exploratory test metrics.')
+        from screw_refine_predict import RefinedScrewEngine
+        engine = RefinedScrewEngine(expected)
+        if (engine.model_sha256 != model_sha
+                or engine.candidate != manifest.get('selected_candidate')):
+            raise ValueError('Screw-refinement engine differs from its manifest.')
+        self.refined_engine = engine
+        self.refined_manifest = manifest
+
+    def refinement_note(self):
+        note = ('方案由训练侧合成开发集选择；旧真实测试集用于探索性复测，'
+                '仍有漏检和误报风险，不能代表独立新数据验证。')
+        if self.refined_manifest and self.refined_manifest.get('evaluation_note'):
+            note += str(self.refined_manifest['evaluation_note'])
+        return note
+
     def available_models(self):
         models = []
         for category in self.frontier_models:
@@ -118,6 +161,13 @@ class Engine:
                            'name': '自动识别类别 · DINOSaur 2026',
                            'description': '先用 CLS 特征在瓶口、螺丝、榛子、金属螺母四个已知类别中选择，再执行对应类别的异常检测。'
                                           '此路由不识别类别库之外的新类别。'})
+        if self.refined_engine is not None:
+            metrics = self.refined_manifest['test_metrics']
+            candidate = self.refined_engine.candidate
+            models.append({'id': 'screw-refined', 'family': 'refined', 'category': 'screw',
+                           'name': '螺丝 · 开发集选择方案', 'selected_candidate': candidate,
+                           'description': self.refinement_note() + '仅检测螺丝，不进入四类自动路由。'
+                                          f'候选：{candidate}；复测漏检 {metrics["fn"]} 张、误报 {metrics["fp"]} 张。'})
         for category in self.models:
             description = ('原版 ResNet18 正常样本匹配基线，用于瓶口俯视图实验和新版方法对照。'
                            if category == 'bottle' else
@@ -131,6 +181,8 @@ class Engine:
             raise ValueError('请选择已提供的检测类别')
         if model_id in self.models:
             return model_id
+        if model_id == 'screw-refined' and self.refined_engine is not None:
+            return 'screw'
         if model_id == 'dinov3-auto' and self.frontier_models:
             return 'bottle'
         if model_id.startswith('dinov3-') and model_id[7:] in self.frontier_models:
@@ -140,15 +192,24 @@ class Engine:
     def predict(self, model_id, image):
         category = self.example_category(model_id)
         frontier = model_id.startswith('dinov3-')
+        refined = model_id == 'screw-refined'
+        refined_prediction = None
         with self.lock:
             start = time.perf_counter()
-            if frontier:
+            if refined:
+                refined_prediction = self.refined_engine.predict(image)
+                score = refined_prediction['score']
+                threshold = refined_prediction['threshold']
+                heat = refined_prediction['heatmap']
+                elapsed = refined_prediction['total_inference_ms']
+            elif frontier:
                 tensor = self.dino_transform(image).unsqueeze(0)
                 cls, patches = self.dino_extractor.forward_batch(tensor)
                 if model_id == 'dinov3-auto':
                     category = self.choose_task(cls[0], self.prototypes)
                 saved = self.frontier_models[category]
                 score, heat = self.dino_score(patches[0], saved['bank'], FRONTIER_VARIANT)
+                threshold = saved['threshold']
             else:
                 saved = self.models[category]
                 cfg = saved['config']
@@ -156,14 +217,23 @@ class Engine:
                 g, l = self.extractor.forward_batch(tensor)
                 feature = model_features(g, l, cfg['method'], cfg['dims'], cfg['seed'])[0]
                 score, heat = score_one(feature, saved['bank'], cfg['method'], cfg['size'])
-            elapsed = (time.perf_counter() - start) * 1000
+                threshold = saved['threshold']
+            if not refined:
+                elapsed = (time.perf_counter() - start) * 1000
         original = image.resize((224, 224), Image.Resampling.BILINEAR)
-        result = {'category': category, 'score': score, 'threshold': saved['threshold'],
-                  'anomalous': score > saved['threshold'], 'inference_ms': elapsed,
-                  'method': 'DINOSaur 2026 / DINOv3 ViT-S/16' if frontier else 'ResNet18 基线',
+        result = {'category': category, 'score': score, 'threshold': threshold,
+                  'anomalous': score > threshold, 'inference_ms': elapsed,
+                  'method': ('DINOv3 螺丝实验 · 开发集选择方案' if refined else
+                             'DINOSaur 2026 / DINOv3 ViT-S/16' if frontier else 'ResNet18 基线'),
                   'selected_category': category,
                   'original': image_url(original),
                   'heatmap_note': '热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。'}
+        if refined:
+            result['candidate'] = refined_prediction['candidate']
+            result['refinement_note'] = self.refinement_note()
+            result['geometry_fallback'] = bool(refined_prediction['geometry_diagnostics'].get('fallback', False))
+            result['heatmap_note'] = ('分数为正常特征距离经开发集正常中位数归一，不是概率。'
+                                      '热力图逐图缩放；姿态对齐的热图已映射回原图，显示插值不改变图像分数。')
         if model_id == 'dinov3-auto':
             result['category_routing_note'] = ('CLS 最近原型在瓶口、螺丝、榛子、金属螺母四个已知类别中选择；'
                                                '类别库之外的图片也会被分到其中一类，不能据此证明类别识别正确。')

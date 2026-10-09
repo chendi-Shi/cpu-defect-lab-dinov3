@@ -1,0 +1,62 @@
+[
+  {
+    "size": 224,
+    "normal_images": [
+      "data/mvtec/screw/train/good/001.png",
+      "data/mvtec/screw/train/good/005.png",
+      "data/mvtec/screw/train/good/006.png",
+      "data/mvtec/screw/train/good/007.png",
+      "data/mvtec/screw/train/good/009.png",
+      "data/mvtec/screw/train/good/015.png",
+      "data/mvtec/screw/train/good/016.png",
+      "data/mvtec/screw/train/good/017.png"
+    ],
+    "forward_ms": [
+      3504.7715999971842,
+      3779.0218999871286,
+      2572.9914999974426,
+      2644.379699995625,
+      3358.7486000033095,
+      2465.147099996102,
+      2815.206400002353,
+      2077.1486000012374
+    ],
+    "median_ms": 2729.793049998989,
+    "patch_shape": [
+      1,
+      196,
+      384
+    ],
+    "threads": 1
+  },
+  {
+    "size": 336,
+    "normal_images": [
+      "data/mvtec/screw/train/good/001.png",
+      "data/mvtec/screw/train/good/005.png",
+      "data/mvtec/screw/train/good/006.png",
+      "data/mvtec/screw/train/good/007.png",
+      "data/mvtec/screw/train/good/009.png",
+      "data/mvtec/screw/train/good/015.png",
+      "data/mvtec/screw/train/good/016.png",
+      "data/mvtec/screw/train/good/017.png"
+    ],
+    "forward_ms": [
+      3109.006099999533,
+      1393.6463999998523,
+      1405.4336999979569,
+      1004.301699998905,
+      1083.221200009575,
+      992.8521999972872,
+      1166.3715999893611,
+      1208.8301999901887
+    ],
+    "median_ms": 1187.600899989775,
+    "patch_shape": [
+      1,
+      441,
+      384
+    ],
+    "threads": 1
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "version": "screw-refinement-v1",
+  "retrieval": "Float64 masked GEMM candidate selection; direct float32 final distance.",
+  "weights_sha256": "2a1ec16ae28ffa07bc0ead0241ee7df9fc26451fe6f9f839b7b3afa0a906b040",
+  "proxy_generator_source_sha256": "1226eee5064edb5a0f99b51af46c3a585ac714646537ccf22903254225c5c364",
+  "geometry_source_sha256": "a411cc6883f47ce0e5a1218184dca955bf19a72f8a8b17a8b52cc4315f167a60",
+  "runtime_source_sha256": "c36ea7dd1eb770b524cf9b5b90d35e12b8de8fda536c3a1260b86269aee864d2",
+  "report_script_sha256": "4d83faec347284456d9e3cb93fea58d09e3c6e7a3d0e8fe78fc4b2fa9b830e14",
+  "evidence_note": "JSON copies replace local workspace prefixes with '.'; original and exported hashes are recorded separately.",
+  "excluded": [
+    "model.pt",
+    "pretrained weights",
+    "feature caches",
+    "raw dataset"
+  ]
+}

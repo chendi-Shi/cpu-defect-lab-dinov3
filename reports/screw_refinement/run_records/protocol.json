@@ -1,0 +1,40 @@
+{
+  "version": "screw-refinement-v1",
+  "split_seed": 20261009,
+  "coreset_seed": 42,
+  "candidates": [
+    "raw224",
+    "aligned224",
+    "raw336",
+    "multi224_336"
+  ],
+  "fit": 192,
+  "select_sources": 48,
+  "audit_sources": 16,
+  "calibration": 64,
+  "synthetic_kinds": [
+    "scratch",
+    "pit",
+    "texture_shift"
+  ],
+  "resolution": [
+    224,
+    336
+  ],
+  "radius": {
+    "raw224": 3,
+    "aligned224": 3,
+    "raw336": 4
+  },
+  "retrieval": "Float64 masked GEMM candidate selection; direct float32 final distance.",
+  "resource_cap_ms": 20000,
+  "selection": "Macro AUROC of 3 proxy kinds; minimum gain .005; fixed candidate tie order.",
+  "normalization": "Per-view image-score median from 48 selection normal images only.",
+  "fusion": "Mean normalized 224-coordinate maps; image score is fused map maximum.",
+  "threshold": "95th percentile of 64 original normal calibration images; after selection.",
+  "test": "Previously exposed MVTec test; only baseline and preselected winner evaluated.",
+  "weights_sha256": "2a1ec16ae28ffa07bc0ead0241ee7df9fc26451fe6f9f839b7b3afa0a906b040",
+  "proxy_generator_source_sha256": "1226eee5064edb5a0f99b51af46c3a585ac714646537ccf22903254225c5c364",
+  "geometry_source_sha256": "a411cc6883f47ce0e5a1218184dca955bf19a72f8a8b17a8b52cc4315f167a60",
+  "runtime_source_sha256": "c36ea7dd1eb770b524cf9b5b90d35e12b8de8fda536c3a1260b86269aee864d2"
+}

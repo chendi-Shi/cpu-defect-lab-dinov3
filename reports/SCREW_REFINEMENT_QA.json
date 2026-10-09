@@ -1,0 +1,612 @@
+{
+  "status": "passed",
+  "started_at_utc": "2026-10-09T07:39:46.236343+00:00",
+  "score_tolerance": 2e-06,
+  "stages": {
+    "unit_tests": {
+      "status": "passed",
+      "elapsed_seconds": 35.13831840000057,
+      "result": {
+        "returncode": 0,
+        "tests": 57,
+        "python": ".\\.venv\\Scripts\\python.exe",
+        "output": "DINOv3 224px features: 1/1\nDINOv3 336px features: 1/1\nDINOv3 224px features: 1/1\nDINOv3 224px features: 1/1\nDINOv3 224px features: 1/1\nDINOv3 224px features: 1/1\ntest_chunked_nearest_matches_direct (test_detector.DetectorTests) ... ok\ntest_feature_selection_deterministic (test_detector.DetectorTests) ... ok\ntest_local_known_patch (test_detector.DetectorTests) ... ok\ntest_shared_global_uses_same_channels_before_pooling (test_detector.DetectorTests) ... ok\ntest_euclidean_routing_uses_magnitude_without_extra_normalization (test_frontier_core.RoutingTests) ... ok\ntest_routing_ties_are_deterministic_and_empty_bank_rejected (test_frontier_core.RoutingTests) ... ok\ntest_fewer_than_twenty_images_caps_coreset_and_preserves_sources (test_frontier_core.SpatialBankTests) ... ok\ntest_greedy_selection_has_farthest_unselected_property (test_frontier_core.SpatialBankTests) ... ok\ntest_identical_vectors_still_select_distinct_indices_and_terminate (test_frontier_core.SpatialBankTests) ... ok\ntest_invalid_features_and_sampler_rejected (test_frontier_core.SpatialBankTests) ... ok\ntest_seeded_sampling_reproducible_for_each_sampler (test_frontier_core.SpatialBankTests) ... ok\ntest_global_retrieval_matches_naive_flat_bank (test_frontier_core.SpatialRetrievalTests) ... ok\ntest_invalid_grid_and_radius_rejected (test_frontier_core.SpatialRetrievalTests) ... ok\ntest_neighborhood_matches_independent_loops_for_edges_and_chunks (test_frontier_core.SpatialRetrievalTests) ... ok\ntest_outside_grid_cannot_introduce_zero_reference (test_frontier_core.SpatialRetrievalTests) ... ok\ntest_self_distance_is_exactly_zero (test_frontier_core.SpatialRetrievalTests) ... ok\ntest_invalid_inputs (test_metrics.MetricTests) ... ok\ntest_ordering (test_metrics.MetricTests) ... ok\ntest_single_class (test_metrics.MetricTests) ... ok\ntest_threshold (test_metrics.MetricTests) ... ok\ntest_ties (test_metrics.MetricTests) ... ok\ntest_224_and_336_normal_training_only (test_refine_features.RealModelSmokeTests) ... ok\ntest_cache_hit_and_content_invalidation (test_refine_features.RefineCacheTests) ... ok\ntest_custom_identity_and_size_invalidation (test_refine_features.RefineCacheTests) ... ok\ntest_default_preprocessing_shapes (test_refine_features.RefineCacheTests) ... ok\ntest_version_and_order_identity (test_refine_features.RefineCacheTests) ... ok\ntest_exact_self_distances (test_refine_features.RefineDistanceTests) ... ok\ntest_gemm_cache_detects_mutation_and_inference_tensor (test_refine_features.RefineDistanceTests) ... ok\ntest_gemm_cache_is_bounded_to_three_entries (test_refine_features.RefineDistanceTests) ... ok\ntest_gemm_random_boundaries_and_query_budget (test_refine_features.RefineDistanceTests) ... ok\ntest_gemm_rejects_invalid_and_insufficient_budget (test_refine_features.RefineDistanceTests) ... ok\ntest_gemm_self_identical_and_invalid_boundaries (test_refine_features.RefineDistanceTests) ... ok\ntest_identical_vectors_and_boundary_excludes_invalid (test_refine_features.RefineDistanceTests) ... ok\ntest_random_and_boundary_windows (test_refine_features.RefineDistanceTests) ... ok\ntest_reject_invalid_arguments (test_refine_features.RefineDistanceTests) ... ok\ntest_aligned_heatmap_returns_to_original_frame_without_changing_score (test_refine_inference.RefinedInferenceSemantics) ... ok\ntest_alignment_failure_uses_original_pixels_raw_bank_and_raw_median (test_refine_inference.RefinedInferenceSemantics) ... ok\ntest_multiscale_fuses_maps_before_maximum (test_refine_inference.RefinedInferenceSemantics) ... ok\ntest_axis_center_is_full_extent_midpoint (test_screw_geometry.ScrewGeometryTests) ... ok\ntest_foreground_is_largest_dark_component_at_original_size (test_screw_geometry.ScrewGeometryTests) ... ok\ntest_head_direction_and_affine_inverse (test_screw_geometry.ScrewGeometryTests) ... ok\ntest_heatmap_inverse_identity_and_translation (test_screw_geometry.ScrewGeometryTests) ... ok\ntest_heatmap_inverse_quarter_turn_uses_forward_transform (test_screw_geometry.ScrewGeometryTests) ... ok\ntest_mask_warp_preserves_binary_values_and_foreground (test_screw_geometry.ScrewGeometryTests) ... ok\ntest_non_square_geometry_is_explicit_fallback (test_screw_geometry.ScrewGeometryTests) ... ok\ntest_uniform_or_round_foreground_falls_back (test_screw_geometry.ScrewGeometryTests) ... ok\ntest_clear_winner_overrides_priority_order (test_screw_refine.CandidateSelectionTests) ... ok\ntest_custom_minimum_gain_is_respected (test_screw_refine.CandidateSelectionTests) ... ok\ntest_exact_tie_uses_predeclared_order (test_screw_refine.CandidateSelectionTests) ... ok\ntest_minimum_gain_boundary_is_accepted (test_screw_refine.CandidateSelectionTests) ... ok\ntest_numerical_near_tie_does_not_override_fixed_order (test_screw_refine.CandidateSelectionTests) ... ok\ntest_proxy_gain_below_minimum_keeps_baseline (test_screw_refine.CandidateSelectionTests) ... ok\ntest_real_normal_split_is_disjoint_complete_stable_and_keeps_calibration (test_screw_refine.SplitProtocolTests) ... ok\ntest_synthetic_defects_preserve_source_resolution_and_background_and_are_reproducible (test_screw_refine.SyntheticProtocolTests) ... ok\ntest_image_decode (test_validation.ValidationTests) ... ok\ntest_invalid_image (test_validation.ValidationTests) ... ok\ntest_partitions_disjoint_and_cover (test_validation.ValidationTests) ... ok\n\n----------------------------------------------------------------------\nRan 57 tests in 17.024s\n\nOK\n"
+      }
+    },
+    "frozen_artifacts": {
+      "status": "passed",
+      "elapsed_seconds": 13.492343799996888,
+      "result": {
+        "selected": "raw336",
+        "artifact_count": 20,
+        "model_sha256": "a1b7a9956a8282f726bd0e3fcf8bea78dcfe2cbc39c95934ef2a599ced6ec7bf",
+        "selection_sha256": "2000ac86f827ef3363d330eead0ff01684029f5a2613eb94ad7db948236b4c4e",
+        "training_partition_counts": {
+          "fit": 192,
+          "select": 48,
+          "audit": 16,
+          "calibration": 64
+        },
+        "test_used_for_selection": false,
+        "audit_used_for_selection": false
+      }
+    },
+    "independent_metrics": {
+      "status": "passed",
+      "elapsed_seconds": 0.05389419999846723,
+      "result": {
+        "development": {
+          "raw224": {
+            "by_kind_auroc": {
+              "scratch": 0.7243923611111112,
+              "pit": 0.5112847222222222,
+              "texture_shift": 0.5364583333333334
+            },
+            "macro_auroc": 0.5907118055555557,
+            "pooled_auroc": 0.5907118055555556,
+            "differences": {
+              "scratch": 0.0,
+              "pit": 0.0,
+              "texture_shift": 0.0,
+              "macro": 0.0,
+              "pooled": 0.0
+            },
+            "rows": 192
+          },
+          "aligned224": {
+            "by_kind_auroc": {
+              "scratch": 0.6783854166666666,
+              "pit": 0.5299479166666666,
+              "texture_shift": 0.5082465277777778
+            },
+            "macro_auroc": 0.5721932870370371,
+            "pooled_auroc": 0.5721932870370371,
+            "differences": {
+              "scratch": 0.0,
+              "pit": 0.0,
+              "texture_shift": 0.0,
+              "macro": 0.0,
+              "pooled": 0.0
+            },
+            "rows": 192
+          },
+          "raw336": {
+            "by_kind_auroc": {
+              "scratch": 0.7734375,
+              "pit": 0.7287326388888888,
+              "texture_shift": 0.5694444444444444
+            },
+            "macro_auroc": 0.6905381944444443,
+            "pooled_auroc": 0.6905381944444444,
+            "differences": {
+              "scratch": 0.0,
+              "pit": 0.0,
+              "texture_shift": 0.0,
+              "macro": 0.0,
+              "pooled": 0.0
+            },
+            "rows": 192
+          },
+          "multi224_336": {
+            "by_kind_auroc": {
+              "scratch": 0.7690972222222222,
+              "pit": 0.5993923611111112,
+              "texture_shift": 0.5885416666666666
+            },
+            "macro_auroc": 0.65234375,
+            "pooled_auroc": 0.65234375,
+            "differences": {
+              "scratch": 0.0,
+              "pit": 0.0,
+              "texture_shift": 0.0,
+              "macro": 0.0,
+              "pooled": 0.0
+            },
+            "rows": 192
+          }
+        },
+        "audit": {
+          "raw224": {
+            "by_kind_auroc": {
+              "scratch": 0.6640625,
+              "pit": 0.578125,
+              "texture_shift": 0.51171875
+            },
+            "macro_auroc": 0.5846354166666666,
+            "pooled_auroc": 0.5846354166666666,
+            "differences": {
+              "scratch": 0.0,
+              "pit": 0.0,
+              "texture_shift": 0.0,
+              "macro": 0.0,
+              "pooled": 0.0
+            },
+            "rows": 64
+          },
+          "raw336": {
+            "by_kind_auroc": {
+              "scratch": 0.83984375,
+              "pit": 0.71484375,
+              "texture_shift": 0.546875
+            },
+            "macro_auroc": 0.7005208333333334,
+            "pooled_auroc": 0.7005208333333334,
+            "differences": {
+              "scratch": 0.0,
+              "pit": 0.0,
+              "texture_shift": 0.0,
+              "macro": 0.0,
+              "pooled": 0.0
+            },
+            "rows": 64
+          }
+        },
+        "test": {
+          "raw224": {
+            "rows": 160,
+            "image_auroc": 0.7806927649108424,
+            "threshold_metrics": {
+              "tp": 42,
+              "fp": 5,
+              "fn": 77,
+              "tn": 36,
+              "precision": 0.8936170212765957,
+              "recall": 0.35294117647058826,
+              "f1": 0.5060240963855421
+            },
+            "differences": {
+              "image_auroc": 0.0,
+              "threshold": 0.0,
+              "tp": 0.0,
+              "fp": 0.0,
+              "fn": 0.0,
+              "tn": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          },
+          "raw336": {
+            "rows": 160,
+            "image_auroc": 0.8214798114367698,
+            "threshold_metrics": {
+              "tp": 82,
+              "fp": 6,
+              "fn": 37,
+              "tn": 35,
+              "precision": 0.9318181818181818,
+              "recall": 0.6890756302521008,
+              "f1": 0.7922705314009661
+            },
+            "differences": {
+              "image_auroc": 0.0,
+              "threshold": 0.0,
+              "tp": 0.0,
+              "fp": 0.0,
+              "fn": 0.0,
+              "tn": 0.0,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0
+            }
+          }
+        },
+        "calibration": {
+          "raw224": {
+            "rows": 64,
+            "threshold": 1.1661963827024933,
+            "difference": 0.0
+          },
+          "raw336": {
+            "rows": 64,
+            "threshold": 1.0882154040701584,
+            "difference": 0.0
+          }
+        },
+        "selection_recomputed": "raw336",
+        "pixel_note": "Pixel AUROC is not independently recomputed here; this audit independently checks image AUROC and threshold outcomes."
+      }
+    },
+    "real_engine_and_cli": {
+      "status": "passed",
+      "elapsed_seconds": 123.37397240000428,
+      "result": {
+        "candidate": "raw336",
+        "cold_model_load_ms": 1464.029599999776,
+        "predictions": [
+          {
+            "path": "test/good/000.png",
+            "repetition": 1,
+            "score": 0.9681401342655354,
+            "threshold": 1.0882154040701584,
+            "anomalous": false,
+            "candidate": "raw336",
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "preprocessing_ms": 27.34839999175165,
+            "forward_ms": 785.4924999992363,
+            "scoring_ms": 331.4503000001423,
+            "total_inference_ms": 1144.4099999935133,
+            "geometry_diagnostics": {
+              "used": false,
+              "version": "otsu-lcc-pca-head-width-256-axis-bbox-v2"
+            }
+          },
+          {
+            "path": "test/good/000.png",
+            "repetition": 2,
+            "score": 0.9681401342655354,
+            "threshold": 1.0882154040701584,
+            "anomalous": false,
+            "candidate": "raw336",
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "preprocessing_ms": 31.709599992609583,
+            "forward_ms": 774.1983000014443,
+            "scoring_ms": 482.12649999186397,
+            "total_inference_ms": 1288.1367999943905,
+            "geometry_diagnostics": {
+              "used": false,
+              "version": "otsu-lcc-pca-head-width-256-axis-bbox-v2"
+            }
+          },
+          {
+            "path": "test/good/001.png",
+            "repetition": 1,
+            "score": 0.9402217811962185,
+            "threshold": 1.0882154040701584,
+            "anomalous": false,
+            "candidate": "raw336",
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "preprocessing_ms": 27.135700001963414,
+            "forward_ms": 760.5892999999924,
+            "scoring_ms": 286.6527999867685,
+            "total_inference_ms": 1074.4439999980386,
+            "geometry_diagnostics": {
+              "used": false,
+              "version": "otsu-lcc-pca-head-width-256-axis-bbox-v2"
+            }
+          },
+          {
+            "path": "test/good/001.png",
+            "repetition": 2,
+            "score": 0.9402217811962185,
+            "threshold": 1.0882154040701584,
+            "anomalous": false,
+            "candidate": "raw336",
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "preprocessing_ms": 28.798300001653843,
+            "forward_ms": 874.7367000032682,
+            "scoring_ms": 308.5521000029985,
+            "total_inference_ms": 1212.187700002687,
+            "geometry_diagnostics": {
+              "used": false,
+              "version": "otsu-lcc-pca-head-width-256-axis-bbox-v2"
+            }
+          },
+          {
+            "path": "test/scratch_head/000.png",
+            "repetition": 1,
+            "score": 1.226982051043006,
+            "threshold": 1.0882154040701584,
+            "anomalous": true,
+            "candidate": "raw336",
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "preprocessing_ms": 31.274799999664538,
+            "forward_ms": 876.465499997721,
+            "scoring_ms": 419.0249999955995,
+            "total_inference_ms": 1326.961400001892,
+            "geometry_diagnostics": {
+              "used": false,
+              "version": "otsu-lcc-pca-head-width-256-axis-bbox-v2"
+            }
+          },
+          {
+            "path": "test/scratch_head/000.png",
+            "repetition": 2,
+            "score": 1.226982051043006,
+            "threshold": 1.0882154040701584,
+            "anomalous": true,
+            "candidate": "raw336",
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "preprocessing_ms": 48.69399999734014,
+            "forward_ms": 1010.558800000581,
+            "scoring_ms": 359.2110000026878,
+            "total_inference_ms": 1418.5572999995202,
+            "geometry_diagnostics": {
+              "used": false,
+              "version": "otsu-lcc-pca-head-width-256-axis-bbox-v2"
+            }
+          },
+          {
+            "path": "test/thread_side/000.png",
+            "repetition": 1,
+            "score": 0.9904781526032904,
+            "threshold": 1.0882154040701584,
+            "anomalous": false,
+            "candidate": "raw336",
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "preprocessing_ms": 53.73510000936221,
+            "forward_ms": 1398.361700004898,
+            "scoring_ms": 400.90050001163036,
+            "total_inference_ms": 1853.0903999926522,
+            "geometry_diagnostics": {
+              "used": false,
+              "version": "otsu-lcc-pca-head-width-256-axis-bbox-v2"
+            }
+          },
+          {
+            "path": "test/thread_side/000.png",
+            "repetition": 2,
+            "score": 0.9904781526032904,
+            "threshold": 1.0882154040701584,
+            "anomalous": false,
+            "candidate": "raw336",
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "preprocessing_ms": 39.2920000012964,
+            "forward_ms": 1215.2129000023706,
+            "scoring_ms": 385.8468999969773,
+            "total_inference_ms": 1640.4384999914328,
+            "geometry_diagnostics": {
+              "used": false,
+              "version": "otsu-lcc-pca-head-width-256-axis-bbox-v2"
+            }
+          }
+        ],
+        "cli_checks": [
+          {
+            "path": "test/good/000.png",
+            "returncode": 0,
+            "score": 0.9681401342655354,
+            "anomalous": false,
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "output_directory": "reports/screw_refinement/cli_qa/good-000",
+            "source_sha256": "805be6dc5dc41dfc85869aec67b4a9e4141bd88b85b352c978355bc807e93159",
+            "original_pixels_match": true
+          },
+          {
+            "path": "test/good/001.png",
+            "returncode": 0,
+            "score": 0.9402217811962185,
+            "anomalous": false,
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "output_directory": "reports/screw_refinement/cli_qa/good-001",
+            "source_sha256": "983a27fcea10ce8eafeebac3db0899e5fb6ad84338a6cabc5746ee96d2865daa",
+            "original_pixels_match": true
+          },
+          {
+            "path": "test/scratch_head/000.png",
+            "returncode": 0,
+            "score": 1.226982051043006,
+            "anomalous": true,
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "output_directory": "reports/screw_refinement/cli_qa/scratch_head-000",
+            "source_sha256": "712bcbfce3d682aa27ecc0513c0d00fde8fba5b235a8daa990b9f1a4cc4d8352",
+            "original_pixels_match": true
+          },
+          {
+            "path": "test/thread_side/000.png",
+            "returncode": 0,
+            "score": 0.9904781526032904,
+            "anomalous": false,
+            "branch": "raw336",
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "output_directory": "reports/screw_refinement/cli_qa/thread_side-000",
+            "source_sha256": "5c647f0782864e6a95a3345b4b5094c6c7f0f442fd340267155a5f2794a2ee61",
+            "original_pixels_match": true
+          }
+        ],
+        "repeat_count_per_image": 2,
+        "timing_note": "Actual resident engine timings; cold model loading listed separately. No fair historical speed comparison is claimed."
+      }
+    },
+    "real_http": {
+      "status": "passed",
+      "elapsed_seconds": 15.207459400000516,
+      "result": {
+        "temporary_port": 56888,
+        "cold_engine_load_ms": 5883.1013000017265,
+        "models": [
+          "bottle",
+          "dinov3-auto",
+          "dinov3-bottle",
+          "dinov3-hazelnut",
+          "dinov3-metal_nut",
+          "dinov3-screw",
+          "screw",
+          "screw-refined"
+        ],
+        "predictions": [
+          {
+            "model": "screw-refined",
+            "path": "test/good/000.png",
+            "score": 0.9681401342655354,
+            "threshold": 1.0882154040701584,
+            "anomalous": false,
+            "inference_ms": 1240.9980999946129,
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "original_pixels_match": true
+          },
+          {
+            "model": "screw-refined",
+            "path": "test/good/001.png",
+            "score": 0.9402217811962185,
+            "threshold": 1.0882154040701584,
+            "anomalous": false,
+            "inference_ms": 1067.7524999919115,
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "original_pixels_match": true
+          },
+          {
+            "model": "screw-refined",
+            "path": "test/scratch_head/000.png",
+            "score": 1.226982051043006,
+            "threshold": 1.0882154040701584,
+            "anomalous": true,
+            "inference_ms": 1055.9808000107296,
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "original_pixels_match": true
+          },
+          {
+            "model": "screw-refined",
+            "path": "test/thread_side/000.png",
+            "score": 0.9904781526032904,
+            "threshold": 1.0882154040701584,
+            "anomalous": false,
+            "inference_ms": 1138.957000002847,
+            "score_difference": 0.0,
+            "threshold_difference": 0.0,
+            "original_pixels_match": true
+          },
+          {
+            "model": "dinov3-screw",
+            "path": "test/good/000.png",
+            "score": 2.4545209407806396,
+            "threshold": 2.6457304477691648,
+            "anomalous": false,
+            "score_difference": 0.0,
+            "threshold_difference": 0.0
+          },
+          {
+            "model": "dinov3-auto",
+            "path": "test/good/000.png",
+            "selected_category": "screw",
+            "score": 2.4545209407806396,
+            "anomalous": false,
+            "score_difference": 0.0,
+            "threshold_difference": 0.0
+          }
+        ],
+        "original_example_checks": [
+          {
+            "kind": "normal",
+            "path": "data/mvtec/screw/test/good/000.png",
+            "raw_pixels_match": true
+          },
+          {
+            "kind": "defect",
+            "path": "data/mvtec/screw/test/manipulated_front/000.png",
+            "raw_pixels_match": true
+          }
+        ],
+        "rejected_uploads": [
+          {
+            "case": "invalid_base64",
+            "status": 400,
+            "error": "无法读取图片，请检查文件格式"
+          },
+          {
+            "case": "invalid_image",
+            "status": 400,
+            "error": "无法读取图片，请检查文件格式"
+          },
+          {
+            "case": "unknown_mode",
+            "status": 400,
+            "error": "请选择已提供的检测类别"
+          },
+          {
+            "case": "wrong_content_type",
+            "status": 415,
+            "error": "请使用 JSON 请求"
+          },
+          {
+            "case": "cross_origin",
+            "status": 403,
+            "error": "请在本机演示页面使用此接口"
+          }
+        ],
+        "port_18765_untouched": true
+      }
+    },
+    "algorithm_dependency_sources": {
+      "status": "passed",
+      "elapsed_seconds": 0.001458899991121143,
+      "checked_after_primary_run": true,
+      "result": {
+        "source_files": [
+          {
+            "path": "screw_refine.py",
+            "sha256": "1226eee5064edb5a0f99b51af46c3a585ac714646537ccf22903254225c5c364",
+            "expected_sha256": "1226eee5064edb5a0f99b51af46c3a585ac714646537ccf22903254225c5c364",
+            "match": true,
+            "protocol_hash_key": "proxy_generator_source_sha256"
+          },
+          {
+            "path": "screw_geometry.py",
+            "sha256": "a411cc6883f47ce0e5a1218184dca955bf19a72f8a8b17a8b52cc4315f167a60",
+            "expected_sha256": "a411cc6883f47ce0e5a1218184dca955bf19a72f8a8b17a8b52cc4315f167a60",
+            "match": true,
+            "protocol_hash_key": "geometry_source_sha256"
+          },
+          {
+            "path": "refine_features.py",
+            "sha256": "c36ea7dd1eb770b524cf9b5b90d35e12b8de8fda536c3a1260b86269aee864d2",
+            "expected_sha256": "c36ea7dd1eb770b524cf9b5b90d35e12b8de8fda536c3a1260b86269aee864d2",
+            "match": true,
+            "protocol_hash_key": "runtime_source_sha256"
+          },
+          {
+            "path": "frontier_core.py",
+            "sha256": "921a1e9bf7b5ed394b747730bb333f7066a6d637dd70bfeacd9b39d06e2d63a4",
+            "expected_sha256": "921a1e9bf7b5ed394b747730bb333f7066a6d637dd70bfeacd9b39d06e2d63a4",
+            "match": true,
+            "protocol_hash_key": null
+          },
+          {
+            "path": "frontier.py",
+            "sha256": "703fe91eabb2c94b347a23102213f68bdaefa884dd13297da1dd8616d11ed3de",
+            "expected_sha256": "703fe91eabb2c94b347a23102213f68bdaefa884dd13297da1dd8616d11ed3de",
+            "match": true,
+            "protocol_hash_key": null
+          },
+          {
+            "path": "metrics.py",
+            "sha256": "cbb43acab190bece5743a27277c823b638f2f703071eb3f3540ed0e049f13694",
+            "expected_sha256": "cbb43acab190bece5743a27277c823b638f2f703071eb3f3540ed0e049f13694",
+            "match": true,
+            "protocol_hash_key": null
+          }
+        ],
+        "source_hashes": {
+          "screw_refine.py": "1226eee5064edb5a0f99b51af46c3a585ac714646537ccf22903254225c5c364",
+          "screw_geometry.py": "a411cc6883f47ce0e5a1218184dca955bf19a72f8a8b17a8b52cc4315f167a60",
+          "refine_features.py": "c36ea7dd1eb770b524cf9b5b90d35e12b8de8fda536c3a1260b86269aee864d2",
+          "frontier_core.py": "921a1e9bf7b5ed394b747730bb333f7066a6d637dd70bfeacd9b39d06e2d63a4",
+          "frontier.py": "703fe91eabb2c94b347a23102213f68bdaefa884dd13297da1dd8616d11ed3de",
+          "metrics.py": "cbb43acab190bece5743a27277c823b638f2f703071eb3f3540ed0e049f13694"
+        },
+        "scope": "Three files are explicit frozen protocol fields; three are supplementary independently pinned dependency fingerprints.",
+        "audit_recorded_at_utc": "2026-10-09T07:40:27.054787+00:00"
+      }
+    }
+  },
+  "errors": [],
+  "test_status": "Previously exposed MVTec test; exploratory verification, not an independent unseen benchmark.",
+  "finished_at_utc": "2026-10-09T07:42:59.299716+00:00",
+  "additional_check_at_utc": "2026-10-09T07:44:20.109722+00:00"
+}

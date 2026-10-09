@@ -1,0 +1,415 @@
+[
+  {
+    "source": "outputs/screw_refinement/aligned224/development_complete.json",
+    "exported": "reports/screw_refinement/run_records/aligned224/development_complete.json",
+    "source_sha256": "18d0804822953e2afc566ea539543685b85d9c928244659c700907401a14cc16",
+    "exported_sha256": "b7a2d5afe0e39667f86a2c9bebe2d657e341f930a13801c4c10ed1eae8e9a23e",
+    "bytes": 545
+  },
+  {
+    "source": "outputs/screw_refinement/development_complete.json",
+    "exported": "reports/screw_refinement/run_records/development_complete.json",
+    "source_sha256": "6c4d3fe4e7ce049df59b29bba56515447c6f734a53d315901128bb2adb35a978",
+    "exported_sha256": "2b96be76b072524415ba4b313da315f39f2a37054e39c2410bdf4f88ad8ab8f2",
+    "bytes": 33228
+  },
+  {
+    "source": "outputs/screw_refinement/evaluation.json",
+    "exported": "reports/screw_refinement/run_records/evaluation.json",
+    "source_sha256": "9819c4848f77ca2ca687e0197d0e2036424ac299c4b854c4b613ac54749da0d7",
+    "exported_sha256": "e100f037d165c5f1ab8efb59f4a4707de37ce12b4839b9525229e132cb72531b",
+    "bytes": 4577
+  },
+  {
+    "source": "outputs/screw_refinement/geometry_development.json",
+    "exported": "reports/screw_refinement/run_records/geometry_development.json",
+    "source_sha256": "c5f3afb172cf15552d36e9e58b69f7aad2db7f3411a913583ae6ac059a926ea4",
+    "exported_sha256": "ddfa1572490c6e5f95e590b7e774d188d3cfb3c815473804ad5bb780d8b58edc",
+    "bytes": 962126
+  },
+  {
+    "source": "outputs/screw_refinement/multi224_336/development_complete.json",
+    "exported": "reports/screw_refinement/run_records/multi224_336/development_complete.json",
+    "source_sha256": "21b9104c958028a07c6152314cd7c5d6eb769e452bb32e6809dd777d3e562892",
+    "exported_sha256": "115d289ad203d0fa9c55463320fc9759660b5bf3d061e50ccc47f74950d6285d",
+    "bytes": 545
+  },
+  {
+    "source": "outputs/screw_refinement/normalization.json",
+    "exported": "reports/screw_refinement/run_records/normalization.json",
+    "source_sha256": "3030faca327fff4e25db6635162780d280dd2c03fb269a6ba087e8cf9acdf747",
+    "exported_sha256": "1c952169659d1479ac24f628d8b0f82b5e682794a07f2ecb2be0270eca487058",
+    "bytes": 3902
+  },
+  {
+    "source": "outputs/screw_refinement/protocol.json",
+    "exported": "reports/screw_refinement/run_records/protocol.json",
+    "source_sha256": "60fcba9ccae7513607cdcd76f6a0d9227f4d1fb7df3f631c87ed5b66ac88675f",
+    "exported_sha256": "4c0518e69c5a8f9fd34057c5f6409de5bb271e6bb5f1392a8b9a2448156385cd",
+    "bytes": 1437
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/development_complete.json",
+    "exported": "reports/screw_refinement/run_records/raw224/development_complete.json",
+    "source_sha256": "acb8a66061c63b399f8455c5253ca0a94dda9ca196049aaf18cc362ab631e9e7",
+    "exported_sha256": "e59060bbf47fb3798912653559c98dce240114e7c6597b5a126a87a1ad6262ac",
+    "bytes": 545
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/test_summary.json",
+    "exported": "reports/screw_refinement/run_records/raw224/test_summary.json",
+    "source_sha256": "df182587383d7be5d13357977c81a8a2d34702161134b58da804c985848cc710",
+    "exported_sha256": "a2435a9ee512cefac3303d312b4993b2476e23d98fb7c7785dab46f0b52b0b22",
+    "bytes": 1751
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/development_complete.json",
+    "exported": "reports/screw_refinement/run_records/raw336/development_complete.json",
+    "source_sha256": "c83f7bdf833e2c3d0e9cf0e8dbc8aab1143ae5bca136ccdc2b0b7c0a9d3d87d3",
+    "exported_sha256": "c900996c942fa9e3e111aaa8008873e36ef858dae36215b1582cdd735dadc76a",
+    "bytes": 545
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/test_summary.json",
+    "exported": "reports/screw_refinement/run_records/raw336/test_summary.json",
+    "source_sha256": "b65ad5bf5479c85187a89047a9d75cbe27969d4815a3595e94b1909c1af2425c",
+    "exported_sha256": "d900bb8577ed816871f3a2ac94bffe7b930549235bf9336ee738b6c1cfa9411d",
+    "bytes": 1747
+  },
+  {
+    "source": "outputs/screw_refinement/resource_probe.json",
+    "exported": "reports/screw_refinement/run_records/resource_probe.json",
+    "source_sha256": "8f51b6154d7b745bc0c74183ca827b97f9535a37f83455c302846019507da9e2",
+    "exported_sha256": "27de28319b81a44faa3ab97b2d5fb653c260aa2fb01166886f3ee3264c6b6c65",
+    "bytes": 1578
+  },
+  {
+    "source": "outputs/screw_refinement/selection.json",
+    "exported": "reports/screw_refinement/run_records/selection.json",
+    "source_sha256": "2000ac86f827ef3363d330eead0ff01684029f5a2613eb94ad7db948236b4c4e",
+    "exported_sha256": "1ae83dea9fb6b5ec4c11aee08ba8d0fe251ba604268b9f6698dd955f02ba5381",
+    "bytes": 1935
+  },
+  {
+    "source": "outputs/screw_refinement/splits.json",
+    "exported": "reports/screw_refinement/run_records/splits.json",
+    "source_sha256": "da7a28cb413031654b0161dab0473b560cf36a7f03f7c25b49395295eaf54ccf",
+    "exported_sha256": "cf59ab8575eab34e77f270aaf9d27b118fffbd556f2b2021935b160779a76f23",
+    "bytes": 51780
+  },
+  {
+    "source": "outputs/screw_refinement/synthetic_manifest.json",
+    "exported": "reports/screw_refinement/run_records/synthetic_manifest.json",
+    "source_sha256": "4f9df46c1ca8c57e40640c0fd5766e62f74880c78ee49ae85d4ec96bf01fcdac",
+    "exported_sha256": "7ce5fbbdce9120dce27ee9fa941443381f75546142e579597eeacf54e5d67b5d",
+    "bytes": 307811
+  },
+  {
+    "source": "outputs/screw_refinement/aligned224/development_predictions.csv",
+    "exported": "reports/screw_refinement/run_records/aligned224/development_predictions.csv",
+    "source_sha256": "e2716a57281112016e15b74f88ed00983f7cb063755ed1fc7cc7509c90fdaae8",
+    "exported_sha256": "e2716a57281112016e15b74f88ed00983f7cb063755ed1fc7cc7509c90fdaae8",
+    "bytes": 26463
+  },
+  {
+    "source": "outputs/screw_refinement/multi224_336/development_predictions.csv",
+    "exported": "reports/screw_refinement/run_records/multi224_336/development_predictions.csv",
+    "source_sha256": "39c8efd8a82330af4f496ae2c566984843d49dfb0c00cd403743b2e401017697",
+    "exported_sha256": "39c8efd8a82330af4f496ae2c566984843d49dfb0c00cd403743b2e401017697",
+    "bytes": 27144
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/audit_predictions.csv",
+    "exported": "reports/screw_refinement/run_records/raw224/audit_predictions.csv",
+    "source_sha256": "2c590f9f9096d36b3c8e5fd6a6f239b730ae769d04f05135e6ee406029d3900c",
+    "exported_sha256": "2c590f9f9096d36b3c8e5fd6a6f239b730ae769d04f05135e6ee406029d3900c",
+    "bytes": 7410
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/calibration_predictions.csv",
+    "exported": "reports/screw_refinement/run_records/raw224/calibration_predictions.csv",
+    "source_sha256": "4752eee8d170bca63e644548d2014edbddf6982e6c95dd87f5be7a046319e271",
+    "exported_sha256": "4752eee8d170bca63e644548d2014edbddf6982e6c95dd87f5be7a046319e271",
+    "bytes": 4040
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/development_predictions.csv",
+    "exported": "reports/screw_refinement/run_records/raw224/development_predictions.csv",
+    "source_sha256": "c113a011591851a4c350b143bac23f67379e296147fb00bbc3f561d32e476a09",
+    "exported_sha256": "c113a011591851a4c350b143bac23f67379e296147fb00bbc3f561d32e476a09",
+    "bytes": 25831
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/test_predictions.csv",
+    "exported": "reports/screw_refinement/run_records/raw224/test_predictions.csv",
+    "source_sha256": "fa491cffcd1f3322a3979206eb609d6385a42173a76899087dbc30824d4ad49a",
+    "exported_sha256": "fa491cffcd1f3322a3979206eb609d6385a42173a76899087dbc30824d4ad49a",
+    "bytes": 13580
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/audit_predictions.csv",
+    "exported": "reports/screw_refinement/run_records/raw336/audit_predictions.csv",
+    "source_sha256": "e532e3cd0e6d7a0e1f24a4600dae4e7e68541c68f6fbbd249af2457518b9cb95",
+    "exported_sha256": "e532e3cd0e6d7a0e1f24a4600dae4e7e68541c68f6fbbd249af2457518b9cb95",
+    "bytes": 7404
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/calibration_predictions.csv",
+    "exported": "reports/screw_refinement/run_records/raw336/calibration_predictions.csv",
+    "source_sha256": "79d6bfc63f571d30f248204dfecbe5fe05ed3618491a35c6b6f25ee5d51f37c0",
+    "exported_sha256": "79d6bfc63f571d30f248204dfecbe5fe05ed3618491a35c6b6f25ee5d51f37c0",
+    "bytes": 4044
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/development_predictions.csv",
+    "exported": "reports/screw_refinement/run_records/raw336/development_predictions.csv",
+    "source_sha256": "c9510d63f2b77bd1e10c67a3d600e7cb6d7a655c180a61a33d599b23e0a43e4c",
+    "exported_sha256": "c9510d63f2b77bd1e10c67a3d600e7cb6d7a655c180a61a33d599b23e0a43e4c",
+    "bytes": 25834
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/test_predictions.csv",
+    "exported": "reports/screw_refinement/run_records/raw336/test_predictions.csv",
+    "source_sha256": "ce217bdcc31eb1eb1d75e339686717a6f574cd2071e21a20c7a69c9b453e2820",
+    "exported_sha256": "ce217bdcc31eb1eb1d75e339686717a6f574cd2071e21a20c7a69c9b453e2820",
+    "bytes": 13651
+  },
+  {
+    "source": "SCREW_REFINEMENT_PROTOCOL.md",
+    "exported": "reports/screw_refinement/run_records/SCREW_REFINEMENT_PROTOCOL.md",
+    "source_sha256": "c3fb2483e6efdb0a6eda1a868ec01d22335e60dc47596ea53b778e5fd7509ea8",
+    "exported_sha256": "c3fb2483e6efdb0a6eda1a868ec01d22335e60dc47596ea53b778e5fd7509ea8",
+    "bytes": 12866
+  },
+  {
+    "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/config.json",
+    "exported": "reports/screw_refinement/run_records/historical_256_fit/config.json",
+    "source_sha256": "7c99df8fc2522fc51e43681dfde114d244d2d0c1e3c5aac73ca509342e8665d8",
+    "exported_sha256": "1d8169c8b5e5b3cbf94eb8666348f4bed541b15b4ecac287570d12f463d32a36",
+    "bytes": 14643
+  },
+  {
+    "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/summary.json",
+    "exported": "reports/screw_refinement/run_records/historical_256_fit/summary.json",
+    "source_sha256": "8de65b674b55d5878406c5e2cf0048f95d918fdcd919ba1e711f80639c5837f7",
+    "exported_sha256": "a260e5acf9236c7b88573ac3274f32a4012a445feae254fb272b7537897c13e0",
+    "bytes": 862
+  },
+  {
+    "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/predictions.csv",
+    "exported": "reports/screw_refinement/run_records/historical_256_fit/predictions.csv",
+    "source_sha256": "e5d7db98f817cadd7391108f7ff7b01151dffbadbe1d50547ed83616876f1262",
+    "exported_sha256": "e5d7db98f817cadd7391108f7ff7b01151dffbadbe1d50547ed83616876f1262",
+    "bytes": 12383
+  },
+  {
+    "source": "reports/screw_refinement/RETRIEVAL_BENCHMARK.json",
+    "exported": "reports/screw_refinement/run_records/resource/RETRIEVAL_BENCHMARK.json",
+    "source_sha256": "9ca24b445751eaa759a291a58490608977bbdb101e8c8dc5237e581c6eb9f6f1",
+    "exported_sha256": "c3843c6c7a0c9d54a85a7f346e4c799382f19175f0c7926a0c84df9ff83b5dec",
+    "bytes": 4323
+  },
+  {
+    "source": "delivery/github-refinement-source-audit.json",
+    "exported": "reports/screw_refinement/run_records/source_dependency_audit.json",
+    "source_sha256": "0abddf346293b1045a63d0755817fc73d34bd519355f0c11687188904ce54a56",
+    "exported_sha256": "0abddf346293b1045a63d0755817fc73d34bd519355f0c11687188904ce54a56",
+    "bytes": 2851
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/error-good-004.png",
+    "exported": "reports/screw_refinement/examples/raw224/error-good-004.png",
+    "source_sha256": "bff0deb334b4d963f1dc5b9ebb00fe537e331adcbd4f4e131d340089e549b5f9",
+    "exported_sha256": "bff0deb334b4d963f1dc5b9ebb00fe537e331adcbd4f4e131d340089e549b5f9",
+    "bytes": 95281
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/error-good-008.png",
+    "exported": "reports/screw_refinement/examples/raw224/error-good-008.png",
+    "source_sha256": "632c97af3f31dcf1c07cc4c40852052d478c0a1e4354f62840d712b80f5142e3",
+    "exported_sha256": "632c97af3f31dcf1c07cc4c40852052d478c0a1e4354f62840d712b80f5142e3",
+    "bytes": 92392
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/error-good-013.png",
+    "exported": "reports/screw_refinement/examples/raw224/error-good-013.png",
+    "source_sha256": "a5c0f2f1bdc396eea28184386ce0e9403db9da35614687832a27d3b553ad5c20",
+    "exported_sha256": "a5c0f2f1bdc396eea28184386ce0e9403db9da35614687832a27d3b553ad5c20",
+    "bytes": 95962
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/error-good-014.png",
+    "exported": "reports/screw_refinement/examples/raw224/error-good-014.png",
+    "source_sha256": "dc8871ebb51c6c5aa4f8b331a7c40825165023fc7d6f0d71c6789f5c33556fbb",
+    "exported_sha256": "dc8871ebb51c6c5aa4f8b331a7c40825165023fc7d6f0d71c6789f5c33556fbb",
+    "bytes": 90864
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/error-good-026.png",
+    "exported": "reports/screw_refinement/examples/raw224/error-good-026.png",
+    "source_sha256": "66dd54fe59a6a72fc5eb36b4f461981d56c9080db4ee2d9d1acca433b4a4c16e",
+    "exported_sha256": "66dd54fe59a6a72fc5eb36b4f461981d56c9080db4ee2d9d1acca433b4a4c16e",
+    "bytes": 93457
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/error-manipulated_front-000.png",
+    "exported": "reports/screw_refinement/examples/raw224/error-manipulated_front-000.png",
+    "source_sha256": "904e3eb52c8cabef6b114e1ff4dd5e2a3a88eb7cf7b1cfc61483a5f8b9982734",
+    "exported_sha256": "904e3eb52c8cabef6b114e1ff4dd5e2a3a88eb7cf7b1cfc61483a5f8b9982734",
+    "bytes": 101397
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/error-manipulated_front-001.png",
+    "exported": "reports/screw_refinement/examples/raw224/error-manipulated_front-001.png",
+    "source_sha256": "bf2bf126c3dbcaaeb977af44456ed2c2a9715b3c912c334e84f14e8600232daa",
+    "exported_sha256": "bf2bf126c3dbcaaeb977af44456ed2c2a9715b3c912c334e84f14e8600232daa",
+    "bytes": 98553
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/error-manipulated_front-002.png",
+    "exported": "reports/screw_refinement/examples/raw224/error-manipulated_front-002.png",
+    "source_sha256": "0727c5104b8bdf3c62b60890335142be80d86cc57c39d1034b43cbb034bd6e4a",
+    "exported_sha256": "0727c5104b8bdf3c62b60890335142be80d86cc57c39d1034b43cbb034bd6e4a",
+    "bytes": 94816
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/good-000.png",
+    "exported": "reports/screw_refinement/examples/raw224/good-000.png",
+    "source_sha256": "409e0f20edc9ba6df5bbc88a450aa45cbd619b553df56f0b07ba765f41e8e99c",
+    "exported_sha256": "409e0f20edc9ba6df5bbc88a450aa45cbd619b553df56f0b07ba765f41e8e99c",
+    "bytes": 99698
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/manipulated_front-000.png",
+    "exported": "reports/screw_refinement/examples/raw224/manipulated_front-000.png",
+    "source_sha256": "904e3eb52c8cabef6b114e1ff4dd5e2a3a88eb7cf7b1cfc61483a5f8b9982734",
+    "exported_sha256": "904e3eb52c8cabef6b114e1ff4dd5e2a3a88eb7cf7b1cfc61483a5f8b9982734",
+    "bytes": 101397
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/scratch_head-000.png",
+    "exported": "reports/screw_refinement/examples/raw224/scratch_head-000.png",
+    "source_sha256": "007224890a9b1c706f12a71f49641a52c7a23c254876fa5e686def7e9adea857",
+    "exported_sha256": "007224890a9b1c706f12a71f49641a52c7a23c254876fa5e686def7e9adea857",
+    "bytes": 100439
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/scratch_neck-000.png",
+    "exported": "reports/screw_refinement/examples/raw224/scratch_neck-000.png",
+    "source_sha256": "eee5b0af5759a269c3576a478688a3fb143533bb054069d285ab49afdac2005e",
+    "exported_sha256": "eee5b0af5759a269c3576a478688a3fb143533bb054069d285ab49afdac2005e",
+    "bytes": 94747
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/thread_side-000.png",
+    "exported": "reports/screw_refinement/examples/raw224/thread_side-000.png",
+    "source_sha256": "e637f1da41150f70745cdacc4ca92247117b5f0b50feec182db42ff3c53b68b6",
+    "exported_sha256": "e637f1da41150f70745cdacc4ca92247117b5f0b50feec182db42ff3c53b68b6",
+    "bytes": 98819
+  },
+  {
+    "source": "outputs/screw_refinement/raw224/thread_top-000.png",
+    "exported": "reports/screw_refinement/examples/raw224/thread_top-000.png",
+    "source_sha256": "db1ec2ff546f1bff12150a0e8ad28fb3d0615712230b38893f0bedcd8e338ceb",
+    "exported_sha256": "db1ec2ff546f1bff12150a0e8ad28fb3d0615712230b38893f0bedcd8e338ceb",
+    "bytes": 98390
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/error-good-004.png",
+    "exported": "reports/screw_refinement/examples/raw336/error-good-004.png",
+    "source_sha256": "f076aa034bf18006a719b5758c5319e9fa514439c6a15b6fe72f67bb5f6d04f5",
+    "exported_sha256": "f076aa034bf18006a719b5758c5319e9fa514439c6a15b6fe72f67bb5f6d04f5",
+    "bytes": 96903
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/error-good-005.png",
+    "exported": "reports/screw_refinement/examples/raw336/error-good-005.png",
+    "source_sha256": "0c549e8f94c1ecbdfd8068344c8b718bf66b656a1b4973ce67b9ad61913d0085",
+    "exported_sha256": "0c549e8f94c1ecbdfd8068344c8b718bf66b656a1b4973ce67b9ad61913d0085",
+    "bytes": 101880
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/error-good-008.png",
+    "exported": "reports/screw_refinement/examples/raw336/error-good-008.png",
+    "source_sha256": "10bee0a9868071f1f2e3f75a8766f1949eabf6ad65a771295603cd4ca7e65d11",
+    "exported_sha256": "10bee0a9868071f1f2e3f75a8766f1949eabf6ad65a771295603cd4ca7e65d11",
+    "bytes": 96103
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/error-good-014.png",
+    "exported": "reports/screw_refinement/examples/raw336/error-good-014.png",
+    "source_sha256": "a94f69f6d8dda1fdb687a753f76ce2eecd94d67c07308ef8a758289c5ba7a90b",
+    "exported_sha256": "a94f69f6d8dda1fdb687a753f76ce2eecd94d67c07308ef8a758289c5ba7a90b",
+    "bytes": 95229
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/error-good-019.png",
+    "exported": "reports/screw_refinement/examples/raw336/error-good-019.png",
+    "source_sha256": "44ffa79ab4747e7532334effc31c4b72c497fe5735d3a86874c06d64bf5c643b",
+    "exported_sha256": "44ffa79ab4747e7532334effc31c4b72c497fe5735d3a86874c06d64bf5c643b",
+    "bytes": 99828
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/error-good-035.png",
+    "exported": "reports/screw_refinement/examples/raw336/error-good-035.png",
+    "source_sha256": "57d29306381482c594efbee564b71354bbe1dece2b3f8d52c6d1f30fdef3f5ff",
+    "exported_sha256": "57d29306381482c594efbee564b71354bbe1dece2b3f8d52c6d1f30fdef3f5ff",
+    "bytes": 97388
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/error-manipulated_front-000.png",
+    "exported": "reports/screw_refinement/examples/raw336/error-manipulated_front-000.png",
+    "source_sha256": "95590193c11b27ffa5b8ee977396cf127c5626f234ef78083fd3a1584e24a02b",
+    "exported_sha256": "95590193c11b27ffa5b8ee977396cf127c5626f234ef78083fd3a1584e24a02b",
+    "bytes": 104382
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/error-manipulated_front-002.png",
+    "exported": "reports/screw_refinement/examples/raw336/error-manipulated_front-002.png",
+    "source_sha256": "29f9360b2277e32bc6e72e3f90164360eb0da3e2f1ef58dc7901e408b00bb816",
+    "exported_sha256": "29f9360b2277e32bc6e72e3f90164360eb0da3e2f1ef58dc7901e408b00bb816",
+    "bytes": 98908
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/good-000.png",
+    "exported": "reports/screw_refinement/examples/raw336/good-000.png",
+    "source_sha256": "a3a6db3d6b188cfde6a084a407fca9e7eb51d45b658c8258c2bc87194d19802b",
+    "exported_sha256": "a3a6db3d6b188cfde6a084a407fca9e7eb51d45b658c8258c2bc87194d19802b",
+    "bytes": 103911
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/manipulated_front-000.png",
+    "exported": "reports/screw_refinement/examples/raw336/manipulated_front-000.png",
+    "source_sha256": "95590193c11b27ffa5b8ee977396cf127c5626f234ef78083fd3a1584e24a02b",
+    "exported_sha256": "95590193c11b27ffa5b8ee977396cf127c5626f234ef78083fd3a1584e24a02b",
+    "bytes": 104382
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/scratch_head-000.png",
+    "exported": "reports/screw_refinement/examples/raw336/scratch_head-000.png",
+    "source_sha256": "42350636aa440d7795b550dfcf47dfa3c6148f5c2557fca40ade23dfb53d125a",
+    "exported_sha256": "42350636aa440d7795b550dfcf47dfa3c6148f5c2557fca40ade23dfb53d125a",
+    "bytes": 103139
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/scratch_neck-000.png",
+    "exported": "reports/screw_refinement/examples/raw336/scratch_neck-000.png",
+    "source_sha256": "7861f4c49b3e890c40bc1b857659eccc4167e041bfbcf07e587a1d0a9122e3da",
+    "exported_sha256": "7861f4c49b3e890c40bc1b857659eccc4167e041bfbcf07e587a1d0a9122e3da",
+    "bytes": 97682
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/thread_side-000.png",
+    "exported": "reports/screw_refinement/examples/raw336/thread_side-000.png",
+    "source_sha256": "8025b44e222e538699e466dbe02069a0ba650c613f7c89c04397edb5b6bb83bb",
+    "exported_sha256": "8025b44e222e538699e466dbe02069a0ba650c613f7c89c04397edb5b6bb83bb",
+    "bytes": 102181
+  },
+  {
+    "source": "outputs/screw_refinement/raw336/thread_top-000.png",
+    "exported": "reports/screw_refinement/examples/raw336/thread_top-000.png",
+    "source_sha256": "cbe310445ec2888eceedfedb3df02ce4c04d938044e47c28a33f29850f5bdd7d",
+    "exported_sha256": "cbe310445ec2888eceedfedb3df02ce4c04d938044e47c28a33f29850f5bdd7d",
+    "bytes": 103001
+  }
+]

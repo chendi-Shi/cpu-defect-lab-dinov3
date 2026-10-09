@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "recorded_at_utc": "2026-10-09T07:55:32.060883+00:00",
+  "method": "Actual browser controls, examples and file-chooser uploads; DOM and screenshot observed.",
+  "url": "http://127.0.0.1:18765/",
+  "model": "screw-refined",
+  "candidate": "raw336",
+  "catalog_options": 8,
+  "old_models_retained": true,
+  "model_switch_clears_input_score_and_heatmap": true,
+  "run_disabled_without_image": true,
+  "chinese_exploratory_limitations_and_37_fn_6_fp_visible": true,
+  "raw336_does_not_claim_pose_alignment": true,
+  "cases": [
+    {
+      "path": "test/good/000.png",
+      "displayed_score": "0.9681",
+      "offline_score": 0.9681401342655354,
+      "displayed_threshold": "1.0882",
+      "anomalous": false,
+      "ground_truth_anomalous": false,
+      "displayed_inference_ms": 4005,
+      "rounded_score_matches_offline": true
+    },
+    {
+      "path": "test/scratch_head/000.png",
+      "displayed_score": "1.2270",
+      "offline_score": 1.226982051043006,
+      "displayed_threshold": "1.0882",
+      "anomalous": true,
+      "ground_truth_anomalous": true,
+      "displayed_inference_ms": 3533,
+      "rounded_score_matches_offline": true
+    },
+    {
+      "path": "test/manipulated_front/000.png",
+      "displayed_score": "1.0217",
+      "offline_score": 1.0217304311716398,
+      "displayed_threshold": "1.0882",
+      "anomalous": false,
+      "ground_truth_anomalous": true,
+      "displayed_inference_ms": 3723,
+      "rounded_score_matches_offline": true
+    },
+    {
+      "path": "test/scratch_head/000.png",
+      "displayed_score": "1.2270",
+      "offline_score": 1.226982051043006,
+      "displayed_threshold": "1.0882",
+      "anomalous": true,
+      "ground_truth_anomalous": true,
+      "displayed_inference_ms": 9458,
+      "rounded_score_matches_offline": true
+    }
+  ],
+  "browser_console_errors_observed": [],
+  "screenshot": "reports/SCREW_REFINEMENT_DEMO_SCREENSHOT.png",
+  "screenshot_sha256": "449faea8dd1dccb1d35d050c05525baf7135a376e1aa784b3356ad87e41f06e9",
+  "limits": [
+    "This is UI/inference consistency QA, not additional model selection or a new independent test set.",
+    "Inference time varied with system load; do not interpret these observations as a controlled speed benchmark.",
+    "manipulated_front/000.png is an observed false negative and remains published."
+  ]
+}

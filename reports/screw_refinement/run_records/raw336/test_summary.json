@@ -1,0 +1,78 @@
+{
+  "n": 160,
+  "image_auroc": 0.8214798114367698,
+  "threshold": 1.0882154040701584,
+  "threshold_metrics": {
+    "tp": 82,
+    "fp": 6,
+    "fn": 37,
+    "tn": 35,
+    "precision": 0.9318181818181818,
+    "recall": 0.6890756302521008,
+    "f1": 0.7922705314009661
+  },
+  "pixel_auroc_common_valid_224": 0.9300478394270478,
+  "pixel_valid_fraction": 1.0,
+  "pixel_metric_note": "Original 224 frame; same evaluable pixels for baseline and selected candidate; not official original-resolution metric.",
+  "by_kind": {
+    "good": {
+      "tp": 0,
+      "fp": 6,
+      "fn": 0,
+      "tn": 35,
+      "precision": 0.0,
+      "recall": null,
+      "f1": 0.0
+    },
+    "manipulated_front": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 12,
+      "tn": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    "scratch_head": {
+      "tp": 17,
+      "fp": 0,
+      "fn": 7,
+      "tn": 0,
+      "precision": 1.0,
+      "recall": 0.7083333333333334,
+      "f1": 0.8292682926829268
+    },
+    "scratch_neck": {
+      "tp": 23,
+      "fp": 0,
+      "fn": 2,
+      "tn": 0,
+      "precision": 1.0,
+      "recall": 0.92,
+      "f1": 0.9583333333333334
+    },
+    "thread_side": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 11,
+      "tn": 0,
+      "precision": 1.0,
+      "recall": 0.5217391304347826,
+      "f1": 0.6857142857142857
+    },
+    "thread_top": {
+      "tp": 18,
+      "fp": 0,
+      "fn": 5,
+      "tn": 0,
+      "precision": 1.0,
+      "recall": 0.782608695652174,
+      "f1": 0.8780487804878049
+    }
+  },
+  "bank_mib": {
+    "raw336": 12.919921875
+  },
+  "alignment_fallback_count": 0,
+  "scoring_median_ms": 152.20480000425596
+}

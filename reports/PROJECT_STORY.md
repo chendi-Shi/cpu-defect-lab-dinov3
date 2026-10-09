@@ -1,5 +1,7 @@
 # CPU Defect Lab：做了什么、怎么做、问题如何解决
 
+后续已完成一轮螺丝漏检改进，完整方法、实际结果、问题和失败案例见[螺丝改进报告](SCREW_REFINEMENT.md)及[面试解释](SCREW_REFINEMENT_INTERVIEW.md)。下文保留初始四类别实验的历史记录；新的336方案仅在螺丝专用入口提供。
+
 这个项目把近期工业异常检测论文的核心方法，变成了可以在普通笔记本上复现、评估和演示的完整实验。硬件是 Intel i5-1130G7、约 16 GB 内存，没有 NVIDIA 显卡。全程使用 CPU；没有从零训练、微调 DINOv3，也没有 GPU 训练经历。
 
 方法来自 [DINOSaur（ECCV 2026）论文](https://arxiv.org/abs/2605.24251v2)及其[官方代码固定版本](https://github.com/Continue-Edge-AI-Lab/Rethinking-Continual-AD/tree/9574f14f2e5a99e605ed19f0ff78f0a496d29252)，骨干使用公开的 [DINOv3 ViT-S/16 权重](https://huggingface.co/timm/vit_small_patch16_dinov3.lvd1689m)。项目贡献是独立实现核心检索、CPU 适配、控制变量实验、错误分析与工程验证。DINOSaur 算法和 DINOv3 预训练模型属于原作者；本项目不是原创这两个方法，也不是完整论文 benchmark 或全球 SOTA 证明。

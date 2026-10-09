@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-09",
+  "status": "Actually measured; not rerun when this record was saved",
+  "hardware": "Intel Core i5-1130G7; CPU-only; no NVIDIA GPU",
+  "versions": {"torch": "2.14.0+cpu", "torchvision": "0.29.0+cpu", "timm": "1.0.30", "numpy": "1.26.4", "Pillow": "12.3.0"},
+  "weight_sha256": "2a1ec16ae28ffa07bc0ead0241ee7df9fc26451fe6f9f839b7b3afa0a906b040",
+  "feature_contract": "DINOv3 ViT-S/16; CPU float32; final LayerNorm; no extra L2; RoPE periods bf16-truncated then float32",
+  "source": {
+    "dataset": "MVTec AD screw normal training images",
+    "bank_inputs": "data/mvtec/screw/train/good/000.png through 019.png, inclusive",
+    "query": "data/mvtec/screw/train/good/020.png",
+    "representatives": "All first 20 images retained independently at each spatial position; no coreset selection in this probe",
+    "test_images_used": false
+  },
+  "method": {
+    "threads": 1, "radius": 3, "direct_chunk": 8,
+    "gemm_distance_output_budget_mib": 32,
+    "prepared_bank_cache": true,
+    "warmup": "Both implementations warmed before the three repetitions",
+    "order": "Direct then GEMM for repetitions 1 and 3; GEMM then direct for repetition 2",
+    "timed_scope": "Scoring only; same fixed query and bank per size; includes argument validation; excludes backbone feature extraction",
+    "cold_scope": "First GEMM call includes float64 bank/norm/spatial-mask preparation",
+    "memory_note": "Budget bounds squared-distance output, not process peak memory; prepared caches are limited to three bank entries",
+    "algorithm": "Float64 Q @ flattened_bank.T, squared norms and spatial mask for argmin; original-float32 direct difference norm of selected reference for final score"
+  },
+  "runs": [
+    {
+      "size": 224, "patch_shape": [196, 384], "bank_shape": [14, 14, 20, 384],
+      "feature_cache_key": "0b1ca3ff17463522cd4de73df89cc20d",
+      "feature_mean_ms": 439.4344142852961,
+      "direct_ms": [503.64490000356454, 507.28109999909066, 546.5433999925153],
+      "gemm_ms": [76.23160000366624, 75.7071999978507, 80.17380000092089],
+      "direct_median_ms": 507.28109999909066, "gemm_median_ms": 76.23160000366624,
+      "median_speedup": 6.654472685535837, "cold_gemm_ms": 214.0441999945324,
+      "maximum_absolute_distance_error": 0.0, "maximum_self_distance": 0.0,
+      "prepared_float64_bank_mib": 11.484375, "maximum_distance_output_mib": 5.86181640625
+    },
+    {
+      "size": 336, "patch_shape": [441, 384], "bank_shape": [21, 21, 20, 384],
+      "feature_cache_key": "5431dfea4c7193b5967d8985dd1140f6",
+      "feature_mean_ms": 964.8125142855514,
+      "direct_ms": [1311.0005999915302, 1331.7640000022948, 1355.4344000003766],
+      "gemm_ms": [303.4497999906307, 337.94149999448564, 322.0212000014726],
+      "direct_median_ms": 1331.7640000022948, "gemm_median_ms": 322.0212000014726,
+      "median_speedup": 4.135640759043829, "cold_gemm_ms": 416.1357999983011,
+      "maximum_absolute_distance_error": 0.0, "maximum_self_distance": 0.0,
+      "prepared_float64_bank_mib": 25.83984375, "maximum_distance_output_mib": 29.675445556640625
+    }
+  ],
+  "limitations": [
+    "Three repetitions of one normal query per size are a microbenchmark, not a full-dataset speed or accuracy benchmark.",
+    "Radius 3 was held equal for this numerical performance comparison; the formal raw336 candidate uses radius 4.",
+    "Observed times depend on CPU/background load; cold initialization and end-to-end image latency differ.",
+    "Zero discrepancy was observed on these probes; numerical/boundary/repeated-vector tests additionally require error <= 2e-5."
+  ],
+  "verification": "14 tests passed in tests/test_refine_features.py, including both real normal-image model sizes, zero self-distance, random/boundary windows, small-budget query chunks, mutation invalidation and three-entry cache capacity."
+}
