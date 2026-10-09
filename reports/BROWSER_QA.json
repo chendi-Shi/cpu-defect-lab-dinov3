@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "browser": "Codex in-app browser",
+  "url": "http://127.0.0.1:18765/",
+  "checks": [
+    "Real PNG file upload through file chooser: bottle/test/good/000.png; score 0.4389; normal prediction; heatmap visible",
+    "Category selector includes bottle and screw research control",
+    "Switch category clears previous input and result",
+    "Screw defect example: score 0.7462, threshold 0.8182; missed anomaly honestly displayed",
+    "Screw performance limitation visible in category note",
+    "Bottle defect example: score 0.9241, threshold 0.5569; anomaly and heatmap visible",
+    "Desktop full-page visual inspection passed: controls, metrics, images, text unobstructed"
+  ],
+  "screenshot": "reports/DEMO_SCREENSHOT.jpg",
+  "scope": "Observed interactions and desktop visual layout; does not claim all devices tested."
+}

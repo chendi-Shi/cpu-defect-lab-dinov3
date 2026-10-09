@@ -1,0 +1,56 @@
+{
+  "method": "local",
+  "category": "hazelnut",
+  "image_auroc": 0.935,
+  "pixel_auroc": 0.9672506156349235,
+  "threshold": 0.8089987874031066,
+  "threshold_rule": "95th percentile of held-out normal training scores",
+  "threshold_metrics": {
+    "tp": 54,
+    "fp": 2,
+    "fn": 16,
+    "tn": 38,
+    "precision": 0.9642857142857143,
+    "recall": 0.7714285714285715,
+    "f1": 0.8571428571428571
+  },
+  "bank_vectors": 2000,
+  "feature_dimensions": 64,
+  "bank_mib": 0.48828125,
+  "scoring_median_ms": 11.544499997398816,
+  "scoring_p95_ms": 43.38535499991848,
+  "feature_extraction_mean_ms": 702.2362572854123,
+  "feature_cache_hit": false,
+  "fit_images": 313,
+  "calibration_images": 78,
+  "test_images": 110,
+  "smoke_run": false,
+  "timing_note": "Extraction includes decode+resize+forward; scoring excludes decode, visualization and metrics. Cache records original extraction timing.",
+  "defect_breakdown": {
+    "crack": {
+      "images": 18,
+      "predicted_anomalous": 16,
+      "mean_score": 0.8648883832825555
+    },
+    "cut": {
+      "images": 17,
+      "predicted_anomalous": 15,
+      "mean_score": 0.8901417781324947
+    },
+    "good": {
+      "images": 40,
+      "predicted_anomalous": 2,
+      "mean_score": 0.7504474073648453
+    },
+    "hole": {
+      "images": 18,
+      "predicted_anomalous": 17,
+      "mean_score": 0.8596234321594238
+    },
+    "print": {
+      "images": 17,
+      "predicted_anomalous": 6,
+      "mean_score": 0.7958164390395669
+    }
+  }
+}

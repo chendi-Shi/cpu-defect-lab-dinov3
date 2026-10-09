@@ -1,0 +1,51 @@
+{
+  "method": "local",
+  "category": "bottle",
+  "image_auroc": 0.9976190476190476,
+  "pixel_auroc": 0.9740237419686113,
+  "threshold": 0.5812814235687256,
+  "threshold_rule": "95th percentile of held-out normal training scores",
+  "threshold_metrics": {
+    "tp": 63,
+    "fp": 1,
+    "fn": 0,
+    "tn": 19,
+    "precision": 0.984375,
+    "recall": 1.0,
+    "f1": 0.9921259842519685
+  },
+  "bank_vectors": 2000,
+  "feature_dimensions": 64,
+  "bank_mib": 0.48828125,
+  "scoring_median_ms": 218.74560000014753,
+  "scoring_p95_ms": 745.3632900001135,
+  "feature_extraction_mean_ms": 851.5082945205431,
+  "feature_cache_hit": true,
+  "fit_images": 167,
+  "calibration_images": 21,
+  "test_images": 83,
+  "smoke_run": false,
+  "timing_note": "Extraction includes decode+resize+forward; scoring excludes decode, visualization and metrics. Cache records original extraction timing.",
+  "defect_breakdown": {
+    "broken_large": {
+      "images": 20,
+      "predicted_anomalous": 20,
+      "mean_score": 0.880886685848236
+    },
+    "broken_small": {
+      "images": 22,
+      "predicted_anomalous": 22,
+      "mean_score": 0.848307647488334
+    },
+    "contamination": {
+      "images": 21,
+      "predicted_anomalous": 21,
+      "mean_score": 0.8114788617406573
+    },
+    "good": {
+      "images": 20,
+      "predicted_anomalous": 1,
+      "mean_score": 0.447366900742054
+    }
+  }
+}

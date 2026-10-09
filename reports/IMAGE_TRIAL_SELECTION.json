@@ -1,0 +1,100 @@
+{
+  "seed": 20261009,
+  "selection_rule": "3 random bottle normals, one random each bottle defect type, one screw normal and one screw scratch_neck; chosen before new inference",
+  "items": [
+    {
+      "image": "data/mvtec/bottle/test/good/006.png",
+      "model": "bottle",
+      "reference_anomalous": false,
+      "reference_type": "good",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad"
+    },
+    {
+      "image": "data/mvtec/bottle/test/good/014.png",
+      "model": "bottle",
+      "reference_anomalous": false,
+      "reference_type": "good",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad"
+    },
+    {
+      "image": "data/mvtec/bottle/test/good/004.png",
+      "model": "bottle",
+      "reference_anomalous": false,
+      "reference_type": "good",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad"
+    },
+    {
+      "image": "data/mvtec/bottle/test/broken_large/010.png",
+      "model": "bottle",
+      "reference_anomalous": true,
+      "reference_type": "broken_large",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad"
+    },
+    {
+      "image": "data/mvtec/bottle/test/broken_small/002.png",
+      "model": "bottle",
+      "reference_anomalous": true,
+      "reference_type": "broken_small",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad"
+    },
+    {
+      "image": "data/mvtec/bottle/test/contamination/006.png",
+      "model": "bottle",
+      "reference_anomalous": true,
+      "reference_type": "contamination",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad"
+    },
+    {
+      "image": "data/mvtec/screw/test/good/034.png",
+      "model": "screw",
+      "reference_anomalous": false,
+      "reference_type": "good",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad"
+    },
+    {
+      "image": "data/mvtec/screw/test/scratch_neck/014.png",
+      "model": "screw",
+      "reference_anomalous": true,
+      "reference_type": "scratch_neck",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad"
+    },
+    {
+      "image": "data/external_trials/bacardi.jpg",
+      "model": "bottle",
+      "reference_anomalous": null,
+      "reference_type": "external_full_bottle",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bacardi_(on_white).jpg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Bacardi_%28on_white%29.jpg",
+      "author": "Miika Silfverberg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "reference_note": "Industrial defect label unavailable; side-view bottle, outside model capture conditions.",
+      "sha256": "021d3e81ea161f7f75119065c681c8a93631b07f12c5b1efabd9b3a5a01b7dc1",
+      "bytes": 75489
+    },
+    {
+      "image": "data/external_trials/broken_bottle.jpg",
+      "model": "bottle",
+      "reference_anomalous": null,
+      "reference_type": "external_shattered_bottle",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:2008-03-09_Broken_glass_bottle.jpg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/2008-03-09_Broken_glass_bottle.jpg",
+      "author": "Ildar Sagdejev",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "reference_note": "Source describes shattered bottle; no same-domain industrial or pixel label; outside model capture conditions.",
+      "sha256": "3c6421d67b59f01e84222471be53e60b4467278fb1a11cbf32484e2de9938559",
+      "bytes": 1087324
+    }
+  ]
+}

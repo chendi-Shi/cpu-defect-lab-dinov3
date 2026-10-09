@@ -1,0 +1,79 @@
+{
+  "selection": {
+    "dims": 64,
+    "bank_size": 2000,
+    "validation_auroc": 0.9863945578231292,
+    "bank_mib": 0.48828125,
+    "scoring_median_ms": 17.548599999827275,
+    "normal_images": 21,
+    "synthetic_images": 21
+  },
+  "runs": {
+    "bottle": "bottle-20261008-175949-local-64-2000",
+    "screw": "screw-20261008-183955-local-64-2000",
+    "bottle-validation": "bottle-20261008-182633-local-64-2000"
+  },
+  "screw_global_run": "screw-20261008-183738-global_shared-64-2000",
+  "screw_local": {
+    "method": "local",
+    "category": "screw",
+    "image_auroc": 0.5189588030334085,
+    "pixel_auroc": 0.7786444077604842,
+    "threshold": 0.8181538850069044,
+    "threshold_rule": "95th percentile of held-out normal training scores",
+    "threshold_metrics": {
+      "tp": 11,
+      "fp": 5,
+      "fn": 108,
+      "tn": 36,
+      "precision": 0.6875,
+      "recall": 0.09243697478991597,
+      "f1": 0.16296296296296298
+    },
+    "bank_vectors": 2000,
+    "feature_dimensions": 64,
+    "bank_mib": 0.48828125,
+    "scoring_median_ms": 8.29105000002528,
+    "scoring_p95_ms": 44.565524999506884,
+    "feature_extraction_mean_ms": 229.80178791665935,
+    "feature_cache_hit": true,
+    "fit_images": 256,
+    "calibration_images": 64,
+    "test_images": 160,
+    "smoke_run": false,
+    "timing_note": "Extraction includes decode+resize+forward; scoring excludes decode, visualization and metrics. Cache records original extraction timing.",
+    "defect_breakdown": {
+      "good": {
+        "images": 41,
+        "predicted_anomalous": 5,
+        "mean_score": 0.7467558674696015
+      },
+      "manipulated_front": {
+        "images": 24,
+        "predicted_anomalous": 2,
+        "mean_score": 0.7500437051057816
+      },
+      "scratch_head": {
+        "images": 24,
+        "predicted_anomalous": 1,
+        "mean_score": 0.7482130999366442
+      },
+      "scratch_neck": {
+        "images": 25,
+        "predicted_anomalous": 3,
+        "mean_score": 0.7426156854629516
+      },
+      "thread_side": {
+        "images": 23,
+        "predicted_anomalous": 2,
+        "mean_score": 0.7457827692446501
+      },
+      "thread_top": {
+        "images": 23,
+        "predicted_anomalous": 3,
+        "mean_score": 0.7510610741117726
+      }
+    }
+  },
+  "data_separation_verified": true
+}

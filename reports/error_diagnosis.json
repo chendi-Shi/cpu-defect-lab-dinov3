@@ -1,0 +1,91 @@
+{
+  "frozen_run": "bottle-20261008-175949-local-64-2000",
+  "feature_cache_key": "87ff8b92f3f3bc8b7153",
+  "query_file": "test\\good\\006.png",
+  "score": 0.6436906456947327,
+  "threshold": 0.5568733602762221,
+  "score_above_threshold": 0.08681728541851053,
+  "max_patch_index": 90,
+  "max_patch_grid_row_col": [
+    6,
+    6
+  ],
+  "max_patch_box_at_224": [
+    96,
+    96,
+    112,
+    112
+  ],
+  "nearest_training_patches": [
+    {
+      "training_file": "train\\good\\097.png",
+      "patch_index": 105,
+      "grid_row_col": [
+        7,
+        7
+      ],
+      "distance": 0.6436904668807983
+    },
+    {
+      "training_file": "train\\good\\000.png",
+      "patch_index": 48,
+      "grid_row_col": [
+        3,
+        6
+      ],
+      "distance": 0.7440293431282043
+    },
+    {
+      "training_file": "train\\good\\014.png",
+      "patch_index": 48,
+      "grid_row_col": [
+        3,
+        6
+      ],
+      "distance": 0.7476429343223572
+    }
+  ],
+  "highest_normal_calibration_samples": [
+    {
+      "file": "train\\good\\007.png",
+      "score": 0.581720232963562,
+      "grid_row_col": [
+        7,
+        13
+      ]
+    },
+    {
+      "file": "train\\good\\009.png",
+      "score": 0.5812814235687256,
+      "grid_row_col": [
+        6,
+        6
+      ]
+    },
+    {
+      "file": "train\\good\\020.png",
+      "score": 0.5575242638587952,
+      "grid_row_col": [
+        6,
+        6
+      ]
+    },
+    {
+      "file": "train\\good\\038.png",
+      "score": 0.5445061922073364,
+      "grid_row_col": [
+        11,
+        6
+      ]
+    },
+    {
+      "file": "train\\good\\106.png",
+      "score": 0.5413560271263123,
+      "grid_row_col": [
+        6,
+        7
+      ]
+    }
+  ],
+  "interpretation_note": "Grid boxes are not full receptive fields. Observation is not proof of cause."
+}

@@ -1,0 +1,687 @@
+{
+  "schema_version": 1,
+  "state": "complete",
+  "selection": {
+    "prior_selection_source": "reports/IMAGE_TRIAL_SELECTION.json",
+    "prior_results_source": "reports/IMAGE_TRIAL_RESULTS.json",
+    "rule": "Keep the exact previous ten photos; add the lexicographically first normal and first defect PNG for hazelnut and metal_nut. Freeze paths and SHA256 before inference. Never select by predictions.",
+    "items": [
+      {
+        "image": "data/mvtec/bottle/test/good/006.png",
+        "model": "dinov3-bottle",
+        "reference_anomalous": false,
+        "reference_type": "good",
+        "source": "MVTec AD test (previously evaluated in project)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "cb8b1201fa027fada3209cde87514b778231e5d0923c5517d40e78b2e0423e35",
+        "old_result": {
+          "category": "bottle",
+          "score": 0.6436906456947327,
+          "threshold": 0.5568733602762221,
+          "anomalous": true,
+          "inference_ms": 6640.231199999107,
+          "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+        },
+        "domain_shift": false
+      },
+      {
+        "image": "data/mvtec/bottle/test/good/014.png",
+        "model": "dinov3-bottle",
+        "reference_anomalous": false,
+        "reference_type": "good",
+        "source": "MVTec AD test (previously evaluated in project)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "a71581c613032a4db9ac7fc3e5f1b73cf0015015ee6f5a08b2f92495e4c3e3e8",
+        "old_result": {
+          "category": "bottle",
+          "score": 0.4476163685321808,
+          "threshold": 0.5568733602762221,
+          "anomalous": false,
+          "inference_ms": 4390.488999997615,
+          "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+        },
+        "domain_shift": false
+      },
+      {
+        "image": "data/mvtec/bottle/test/good/004.png",
+        "model": "dinov3-bottle",
+        "reference_anomalous": false,
+        "reference_type": "good",
+        "source": "MVTec AD test (previously evaluated in project)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "22e8a84b84435aa6e67266529d6a2f3b7a29f89e4701fd0a969031e517a12dea",
+        "old_result": {
+          "category": "bottle",
+          "score": 0.352794349193573,
+          "threshold": 0.5568733602762221,
+          "anomalous": false,
+          "inference_ms": 3041.3100000005215,
+          "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+        },
+        "domain_shift": false
+      },
+      {
+        "image": "data/mvtec/bottle/test/broken_large/010.png",
+        "model": "dinov3-bottle",
+        "reference_anomalous": true,
+        "reference_type": "broken_large",
+        "source": "MVTec AD test (previously evaluated in project)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "cac8b9cc86de2513a673453689e927a2c70a86b2f4961df2e70d795aad9fc0c6",
+        "old_result": {
+          "category": "bottle",
+          "score": 0.937548041343689,
+          "threshold": 0.5568733602762221,
+          "anomalous": true,
+          "inference_ms": 2613.772599994263,
+          "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+        },
+        "domain_shift": false
+      },
+      {
+        "image": "data/mvtec/bottle/test/broken_small/002.png",
+        "model": "dinov3-bottle",
+        "reference_anomalous": true,
+        "reference_type": "broken_small",
+        "source": "MVTec AD test (previously evaluated in project)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "e605efdbf20478f09084f3026eaa96b91d9d1e7bc113cbe8fb700f2bbcc2763e",
+        "old_result": {
+          "category": "bottle",
+          "score": 0.7716942429542542,
+          "threshold": 0.5568733602762221,
+          "anomalous": true,
+          "inference_ms": 3040.6153999938397,
+          "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+        },
+        "domain_shift": false
+      },
+      {
+        "image": "data/mvtec/bottle/test/contamination/006.png",
+        "model": "dinov3-bottle",
+        "reference_anomalous": true,
+        "reference_type": "contamination",
+        "source": "MVTec AD test (previously evaluated in project)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "d458db2da3744fd2fc797bd7568ed8282fe1583e05d427ffa8e41d67f7e14b03",
+        "old_result": {
+          "category": "bottle",
+          "score": 0.8451605439186096,
+          "threshold": 0.5568733602762221,
+          "anomalous": true,
+          "inference_ms": 2709.630699995614,
+          "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+        },
+        "domain_shift": false
+      },
+      {
+        "image": "data/mvtec/screw/test/good/034.png",
+        "model": "dinov3-screw",
+        "reference_anomalous": false,
+        "reference_type": "good",
+        "source": "MVTec AD test (previously evaluated in project)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "d79b4314b763e01ca26a587cc9971ebcf694a9610c35477fa7e969c2027d948e",
+        "old_result": {
+          "category": "screw",
+          "score": 0.6680777072906494,
+          "threshold": 0.8181538850069044,
+          "anomalous": false,
+          "inference_ms": 2625.9385000012117,
+          "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+        },
+        "domain_shift": false
+      },
+      {
+        "image": "data/mvtec/screw/test/scratch_neck/014.png",
+        "model": "dinov3-screw",
+        "reference_anomalous": true,
+        "reference_type": "scratch_neck",
+        "source": "MVTec AD test (previously evaluated in project)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "501819a0def16b5acfe2e5072702808cfd65ef41199f9cefd73111aec3c760e0",
+        "old_result": {
+          "category": "screw",
+          "score": 0.7611059546470642,
+          "threshold": 0.8181538850069044,
+          "anomalous": false,
+          "inference_ms": 6729.106200000388,
+          "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+        },
+        "domain_shift": false
+      },
+      {
+        "image": "data/external_trials/bacardi.jpg",
+        "model": "dinov3-bottle",
+        "reference_anomalous": null,
+        "reference_type": "external_full_bottle",
+        "source": "Wikimedia Commons",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Bacardi_(on_white).jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Bacardi_%28on_white%29.jpg",
+        "author": "Miika Silfverberg",
+        "license": "CC BY-SA 2.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+        "reference_note": "Industrial defect label unavailable; side-view bottle, outside model capture conditions.",
+        "sha256": "021d3e81ea161f7f75119065c681c8a93631b07f12c5b1efabd9b3a5a01b7dc1",
+        "bytes": 75489,
+        "old_result": {
+          "category": "bottle",
+          "score": 1.0617531538009644,
+          "threshold": 0.5568733602762221,
+          "anomalous": true,
+          "inference_ms": 1548.5999000011361,
+          "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+        },
+        "domain_shift": true
+      },
+      {
+        "image": "data/external_trials/broken_bottle.jpg",
+        "model": "dinov3-bottle",
+        "reference_anomalous": null,
+        "reference_type": "external_shattered_bottle",
+        "source": "Wikimedia Commons",
+        "source_page": "https://commons.wikimedia.org/wiki/File:2008-03-09_Broken_glass_bottle.jpg",
+        "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/2008-03-09_Broken_glass_bottle.jpg",
+        "author": "Ildar Sagdejev",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "reference_note": "Source describes shattered bottle; no same-domain industrial or pixel label; outside model capture conditions.",
+        "sha256": "3c6421d67b59f01e84222471be53e60b4467278fb1a11cbf32484e2de9938559",
+        "bytes": 1087324,
+        "old_result": {
+          "category": "bottle",
+          "score": 1.0004310607910156,
+          "threshold": 0.5568733602762221,
+          "anomalous": true,
+          "inference_ms": 1948.6938000045484,
+          "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+        },
+        "domain_shift": true
+      },
+      {
+        "image": "data/mvtec/hazelnut/test/good/000.png",
+        "model": "dinov3-hazelnut",
+        "reference_anomalous": false,
+        "reference_type": "good",
+        "source": "MVTec AD test (already included in full frontier evaluation)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "32034b75a2dca53cff86c4833e00a25cd65939859820e96ce9b980359cb08955",
+        "domain_shift": false,
+        "old_result": null
+      },
+      {
+        "image": "data/mvtec/hazelnut/test/crack/000.png",
+        "model": "dinov3-hazelnut",
+        "reference_anomalous": true,
+        "reference_type": "crack",
+        "source": "MVTec AD test (already included in full frontier evaluation)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "e26b54282b6b11286760905ca2880af594561b606dfa0643859d6ee6027cf8c2",
+        "domain_shift": false,
+        "old_result": null
+      },
+      {
+        "image": "data/mvtec/metal_nut/test/good/000.png",
+        "model": "dinov3-metal_nut",
+        "reference_anomalous": false,
+        "reference_type": "good",
+        "source": "MVTec AD test (already included in full frontier evaluation)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "d7ca543f04733fb91ac02e18d0fbf06dcff554a1b1ad754173c42d10bb026bb6",
+        "domain_shift": false,
+        "old_result": null
+      },
+      {
+        "image": "data/mvtec/metal_nut/test/bent/000.png",
+        "model": "dinov3-metal_nut",
+        "reference_anomalous": true,
+        "reference_type": "bent",
+        "source": "MVTec AD test (already included in full frontier evaluation)",
+        "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+        "sha256": "602cceb099d5aa10a416f31cd6370ef9d8c810118f4ada9dbc9c28e91a889e0b",
+        "domain_shift": false,
+        "old_result": null
+      }
+    ]
+  },
+  "release_manifest_sha256": "f0bec3cc2a58af9d939a99524d9a237a2bdd37816d37a69f01a6bd905371a9f2",
+  "published_model_sha256": {
+    "bottle": "d7b3cb3f0db3dcfc7b5c2418b7a1775850e310b6b2beadbb69ba33b76d2c75cc",
+    "screw": "e91820b44988508d14fde198720c987d9a09d5b8b7f3229d6df1ad04cbb3e9ea",
+    "hazelnut": "64b7330c4f97e7a1b39e94e634d9cd03bb8e8524f4b42f5fc812a42ba95617e8",
+    "metal_nut": "190e6a683d5085c7a0da264fe4804a84dfa0e26a248f7f142119b208625da915"
+  },
+  "backbone_sha256": "2a1ec16ae28ffa07bc0ead0241ee7df9fc26451fe6f9f839b7b3afa0a906b040",
+  "inference_path": "demo_server.Engine.predict (same backend used by /api/predict)",
+  "completed_at_utc": "2026-10-09T04:51:01.391159+00:00",
+  "threads": 1,
+  "summary": {
+    "images": 14,
+    "labeled_images": 12,
+    "domain_shift_images": 2,
+    "correct": 12,
+    "fp": 0,
+    "fn": 0,
+    "warning": "Fixed visual trial on previously evaluated samples, not an independent generalization estimate; external photos excluded from labeled counts"
+  },
+  "results": [
+    {
+      "image": "data/mvtec/bottle/test/good/006.png",
+      "model": "dinov3-bottle",
+      "reference_anomalous": false,
+      "reference_type": "good",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "cb8b1201fa027fada3209cde87514b778231e5d0923c5517d40e78b2e0423e35",
+      "old_result": {
+        "category": "bottle",
+        "score": 0.6436906456947327,
+        "threshold": 0.5568733602762221,
+        "anomalous": true,
+        "inference_ms": 6640.231199999107,
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "domain_shift": false,
+      "result": {
+        "category": "bottle",
+        "score": 1.709112286567688,
+        "threshold": 1.9396125078201294,
+        "anomalous": false,
+        "inference_ms": 1607.4695999996038,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "bottle",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/mvtec/bottle/test/good/014.png",
+      "model": "dinov3-bottle",
+      "reference_anomalous": false,
+      "reference_type": "good",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "a71581c613032a4db9ac7fc3e5f1b73cf0015015ee6f5a08b2f92495e4c3e3e8",
+      "old_result": {
+        "category": "bottle",
+        "score": 0.4476163685321808,
+        "threshold": 0.5568733602762221,
+        "anomalous": false,
+        "inference_ms": 4390.488999997615,
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "domain_shift": false,
+      "result": {
+        "category": "bottle",
+        "score": 1.4456586837768555,
+        "threshold": 1.9396125078201294,
+        "anomalous": false,
+        "inference_ms": 1280.540399995516,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "bottle",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/mvtec/bottle/test/good/004.png",
+      "model": "dinov3-bottle",
+      "reference_anomalous": false,
+      "reference_type": "good",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "22e8a84b84435aa6e67266529d6a2f3b7a29f89e4701fd0a969031e517a12dea",
+      "old_result": {
+        "category": "bottle",
+        "score": 0.352794349193573,
+        "threshold": 0.5568733602762221,
+        "anomalous": false,
+        "inference_ms": 3041.3100000005215,
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "domain_shift": false,
+      "result": {
+        "category": "bottle",
+        "score": 1.4420872926712036,
+        "threshold": 1.9396125078201294,
+        "anomalous": false,
+        "inference_ms": 1153.7477000092622,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "bottle",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/mvtec/bottle/test/broken_large/010.png",
+      "model": "dinov3-bottle",
+      "reference_anomalous": true,
+      "reference_type": "broken_large",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "cac8b9cc86de2513a673453689e927a2c70a86b2f4961df2e70d795aad9fc0c6",
+      "old_result": {
+        "category": "bottle",
+        "score": 0.937548041343689,
+        "threshold": 0.5568733602762221,
+        "anomalous": true,
+        "inference_ms": 2613.772599994263,
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "domain_shift": false,
+      "result": {
+        "category": "bottle",
+        "score": 4.174413681030273,
+        "threshold": 1.9396125078201294,
+        "anomalous": true,
+        "inference_ms": 1716.0770000045886,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "bottle",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/mvtec/bottle/test/broken_small/002.png",
+      "model": "dinov3-bottle",
+      "reference_anomalous": true,
+      "reference_type": "broken_small",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "e605efdbf20478f09084f3026eaa96b91d9d1e7bc113cbe8fb700f2bbcc2763e",
+      "old_result": {
+        "category": "bottle",
+        "score": 0.7716942429542542,
+        "threshold": 0.5568733602762221,
+        "anomalous": true,
+        "inference_ms": 3040.6153999938397,
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "domain_shift": false,
+      "result": {
+        "category": "bottle",
+        "score": 3.5591578483581543,
+        "threshold": 1.9396125078201294,
+        "anomalous": true,
+        "inference_ms": 1296.8678000033833,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "bottle",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/mvtec/bottle/test/contamination/006.png",
+      "model": "dinov3-bottle",
+      "reference_anomalous": true,
+      "reference_type": "contamination",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "d458db2da3744fd2fc797bd7568ed8282fe1583e05d427ffa8e41d67f7e14b03",
+      "old_result": {
+        "category": "bottle",
+        "score": 0.8451605439186096,
+        "threshold": 0.5568733602762221,
+        "anomalous": true,
+        "inference_ms": 2709.630699995614,
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "domain_shift": false,
+      "result": {
+        "category": "bottle",
+        "score": 4.749607563018799,
+        "threshold": 1.9396125078201294,
+        "anomalous": true,
+        "inference_ms": 1159.9773000052664,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "bottle",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/mvtec/screw/test/good/034.png",
+      "model": "dinov3-screw",
+      "reference_anomalous": false,
+      "reference_type": "good",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "d79b4314b763e01ca26a587cc9971ebcf694a9610c35477fa7e969c2027d948e",
+      "old_result": {
+        "category": "screw",
+        "score": 0.6680777072906494,
+        "threshold": 0.8181538850069044,
+        "anomalous": false,
+        "inference_ms": 2625.9385000012117,
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "domain_shift": false,
+      "result": {
+        "category": "screw",
+        "score": 2.3446147441864014,
+        "threshold": 2.6457304477691648,
+        "anomalous": false,
+        "inference_ms": 1573.7526000011712,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "screw",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/mvtec/screw/test/scratch_neck/014.png",
+      "model": "dinov3-screw",
+      "reference_anomalous": true,
+      "reference_type": "scratch_neck",
+      "source": "MVTec AD test (previously evaluated in project)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "501819a0def16b5acfe2e5072702808cfd65ef41199f9cefd73111aec3c760e0",
+      "old_result": {
+        "category": "screw",
+        "score": 0.7611059546470642,
+        "threshold": 0.8181538850069044,
+        "anomalous": false,
+        "inference_ms": 6729.106200000388,
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "domain_shift": false,
+      "result": {
+        "category": "screw",
+        "score": 2.9429967403411865,
+        "threshold": 2.6457304477691648,
+        "anomalous": true,
+        "inference_ms": 1780.550099996617,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "screw",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/external_trials/bacardi.jpg",
+      "model": "dinov3-bottle",
+      "reference_anomalous": null,
+      "reference_type": "external_full_bottle",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Bacardi_(on_white).jpg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Bacardi_%28on_white%29.jpg",
+      "author": "Miika Silfverberg",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "reference_note": "Industrial defect label unavailable; side-view bottle, outside model capture conditions.",
+      "sha256": "021d3e81ea161f7f75119065c681c8a93631b07f12c5b1efabd9b3a5a01b7dc1",
+      "bytes": 75489,
+      "old_result": {
+        "category": "bottle",
+        "score": 1.0617531538009644,
+        "threshold": 0.5568733602762221,
+        "anomalous": true,
+        "inference_ms": 1548.5999000011361,
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "domain_shift": true,
+      "result": {
+        "category": "bottle",
+        "score": 8.806723594665527,
+        "threshold": 1.9396125078201294,
+        "anomalous": true,
+        "inference_ms": 1066.1493000079645,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "bottle",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": null,
+      "error_type": null,
+      "check": "domain_shift / no comparable industrial label"
+    },
+    {
+      "image": "data/external_trials/broken_bottle.jpg",
+      "model": "dinov3-bottle",
+      "reference_anomalous": null,
+      "reference_type": "external_shattered_bottle",
+      "source": "Wikimedia Commons",
+      "source_page": "https://commons.wikimedia.org/wiki/File:2008-03-09_Broken_glass_bottle.jpg",
+      "download_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/2008-03-09_Broken_glass_bottle.jpg",
+      "author": "Ildar Sagdejev",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "reference_note": "Source describes shattered bottle; no same-domain industrial or pixel label; outside model capture conditions.",
+      "sha256": "3c6421d67b59f01e84222471be53e60b4467278fb1a11cbf32484e2de9938559",
+      "bytes": 1087324,
+      "old_result": {
+        "category": "bottle",
+        "score": 1.0004310607910156,
+        "threshold": 0.5568733602762221,
+        "anomalous": true,
+        "inference_ms": 1948.6938000045484,
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "domain_shift": true,
+      "result": {
+        "category": "bottle",
+        "score": 8.952051162719727,
+        "threshold": 1.9396125078201294,
+        "anomalous": true,
+        "inference_ms": 1029.3701000045985,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "bottle",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": null,
+      "error_type": null,
+      "check": "domain_shift / no comparable industrial label"
+    },
+    {
+      "image": "data/mvtec/hazelnut/test/good/000.png",
+      "model": "dinov3-hazelnut",
+      "reference_anomalous": false,
+      "reference_type": "good",
+      "source": "MVTec AD test (already included in full frontier evaluation)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "32034b75a2dca53cff86c4833e00a25cd65939859820e96ce9b980359cb08955",
+      "domain_shift": false,
+      "old_result": null,
+      "result": {
+        "category": "hazelnut",
+        "score": 3.437626600265503,
+        "threshold": 3.6273547768592835,
+        "anomalous": false,
+        "inference_ms": 1307.081000006292,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "hazelnut",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/mvtec/hazelnut/test/crack/000.png",
+      "model": "dinov3-hazelnut",
+      "reference_anomalous": true,
+      "reference_type": "crack",
+      "source": "MVTec AD test (already included in full frontier evaluation)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "e26b54282b6b11286760905ca2880af594561b606dfa0643859d6ee6027cf8c2",
+      "domain_shift": false,
+      "old_result": null,
+      "result": {
+        "category": "hazelnut",
+        "score": 4.773355960845947,
+        "threshold": 3.6273547768592835,
+        "anomalous": true,
+        "inference_ms": 1405.7200999959605,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "hazelnut",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/mvtec/metal_nut/test/good/000.png",
+      "model": "dinov3-metal_nut",
+      "reference_anomalous": false,
+      "reference_type": "good",
+      "source": "MVTec AD test (already included in full frontier evaluation)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "d7ca543f04733fb91ac02e18d0fbf06dcff554a1b1ad754173c42d10bb026bb6",
+      "domain_shift": false,
+      "old_result": null,
+      "result": {
+        "category": "metal_nut",
+        "score": 1.9571900367736816,
+        "threshold": 2.32310266494751,
+        "anomalous": false,
+        "inference_ms": 1259.598000004189,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "metal_nut",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    },
+    {
+      "image": "data/mvtec/metal_nut/test/bent/000.png",
+      "model": "dinov3-metal_nut",
+      "reference_anomalous": true,
+      "reference_type": "bent",
+      "source": "MVTec AD test (already included in full frontier evaluation)",
+      "source_page": "https://www.mvtec.com/research-teaching/datasets/mvtec-ad",
+      "sha256": "602cceb099d5aa10a416f31cd6370ef9d8c810118f4ada9dbc9c28e91a889e0b",
+      "domain_shift": false,
+      "old_result": null,
+      "result": {
+        "category": "metal_nut",
+        "score": 3.8342676162719727,
+        "threshold": 2.32310266494751,
+        "anomalous": true,
+        "inference_ms": 853.4106000006432,
+        "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+        "selected_category": "metal_nut",
+        "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。"
+      },
+      "correct": true,
+      "error_type": null,
+      "check": "correct"
+    }
+  ]
+}

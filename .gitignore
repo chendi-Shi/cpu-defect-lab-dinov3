@@ -1,0 +1,8 @@
+.venv/
+data/
+cache/
+outputs/
+release/
+delivery/
+__pycache__/
+*.pyc

@@ -1,0 +1,29 @@
+{
+  "category": "bottle",
+  "variant": "spatial_kcenter_r3",
+  "seed": 43,
+  "image_auroc": 1.0,
+  "pixel_auroc": 0.9786742449030134,
+  "threshold": 1.9666946053504943,
+  "threshold_metrics": {
+    "tp": 63,
+    "fp": 0,
+    "fn": 0,
+    "tn": 20,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0
+  },
+  "bank_vectors": 3920,
+  "bank_mib": 5.7421875,
+  "scoring_median_ms": 903.564499996719,
+  "scoring_p95_ms": 1457.6531200043974,
+  "feature_extraction_mean_ms": 1062.0429726026587,
+  "coreset_seconds": 1.905592199997045,
+  "fit_images": 167,
+  "calibration_images": 42,
+  "test_images": 83,
+  "smoke_run": false,
+  "feature_cache_hit": false,
+  "timing_note": "Scoring includes map interpolation; excludes feature extraction, image IO, metrics and drawing."
+}

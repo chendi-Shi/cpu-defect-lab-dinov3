@@ -1,0 +1,61 @@
+{
+  "method": "global_shared",
+  "category": "screw",
+  "image_auroc": 0.6232834597253536,
+  "pixel_auroc": null,
+  "threshold": 0.08458864614367484,
+  "threshold_rule": "95th percentile of held-out normal training scores",
+  "threshold_metrics": {
+    "tp": 23,
+    "fp": 8,
+    "fn": 96,
+    "tn": 33,
+    "precision": 0.7419354838709677,
+    "recall": 0.19327731092436976,
+    "f1": 0.30666666666666664
+  },
+  "bank_vectors": 256,
+  "feature_dimensions": 64,
+  "bank_mib": 0.0625,
+  "scoring_median_ms": 1.11479999986841,
+  "scoring_p95_ms": 4.843280000204685,
+  "feature_extraction_mean_ms": 229.80178791665935,
+  "feature_cache_hit": false,
+  "fit_images": 256,
+  "calibration_images": 64,
+  "test_images": 160,
+  "smoke_run": false,
+  "timing_note": "Extraction includes decode+resize+forward; scoring excludes decode, visualization and metrics. Cache records original extraction timing.",
+  "defect_breakdown": {
+    "good": {
+      "images": 41,
+      "predicted_anomalous": 8,
+      "mean_score": 0.07203705245401801
+    },
+    "manipulated_front": {
+      "images": 24,
+      "predicted_anomalous": 3,
+      "mean_score": 0.07362959425275524
+    },
+    "scratch_head": {
+      "images": 24,
+      "predicted_anomalous": 7,
+      "mean_score": 0.07781138985107343
+    },
+    "scratch_neck": {
+      "images": 25,
+      "predicted_anomalous": 5,
+      "mean_score": 0.07784239530563354
+    },
+    "thread_side": {
+      "images": 23,
+      "predicted_anomalous": 4,
+      "mean_score": 0.07640204270896704
+    },
+    "thread_top": {
+      "images": 23,
+      "predicted_anomalous": 4,
+      "mean_score": 0.07747810544527095
+    }
+  }
+}

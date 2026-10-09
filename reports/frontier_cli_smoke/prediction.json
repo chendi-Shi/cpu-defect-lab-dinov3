@@ -1,0 +1,16 @@
+{
+  "model": "dinov3-auto",
+  "image": ".\\data\\mvtec\\bottle\\test\\broken_large\\000.png",
+  "score": 5.0524001121521,
+  "threshold": 1.9396125078201294,
+  "anomalous": true,
+  "method": "DINOSaur 2026 / DINOv3 ViT-S/16",
+  "selected_category": "bottle",
+  "inference_ms": 940.8625000069151,
+  "heatmap_note": "热力图按当前图片单独缩放；颜色用于显示位置，不代表异常概率。",
+  "category_routing_note": "CLS 最近原型在瓶口、螺丝、榛子、金属螺母四个已知类别中选择；类别库之外的图片也会被分到其中一类，不能据此证明类别识别正确。",
+  "files": {
+    "original": ".\\reports\\frontier_cli_smoke\\original.png",
+    "heatmap": ".\\reports\\frontier_cli_smoke\\heatmap.png"
+  }
+}

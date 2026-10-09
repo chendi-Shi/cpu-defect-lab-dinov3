@@ -1,0 +1,1955 @@
+{
+  "schema_version": 1,
+  "complete": true,
+  "missing": [],
+  "main_variant": "spatial_kcenter_r3",
+  "coreset_seeds": [
+    42,
+    43,
+    44
+  ],
+  "published_seed": 42,
+  "backbone_provenance": {
+    "schema_version": 1,
+    "verified_at_utc": "2026-10-09T03:06:24.550499+00:00",
+    "checkpoint_file": "model.safetensors",
+    "checkpoint_format": "safetensors",
+    "bytes": 86362376,
+    "sha256": "2a1ec16ae28ffa07bc0ead0241ee7df9fc26451fe6f9f839b7b3afa0a906b040",
+    "reused_verified_checkpoint": true,
+    "source": "https://huggingface.co/timm/vit_small_patch16_dinov3.lvd1689m/resolve/3bf4720a82ec2066db88137180ff1f83a675cef0/model.safetensors",
+    "model_id": "timm/vit_small_patch16_dinov3.lvd1689m",
+    "model_revision": "3bf4720a82ec2066db88137180ff1f83a675cef0",
+    "access": "Public timm repository; anonymous HF API gated=false and HTTP HEAD=200 were verified",
+    "backbone": "DINOv3 ViT-S/16 distilled on LVD-1689M",
+    "model_repository": "https://github.com/facebookresearch/dinov3",
+    "runtime_repository": "https://github.com/huggingface/pytorch-image-models",
+    "runtime_version": "1.0.30",
+    "runtime_commit": "0df212b369a5385b16dfe513d5143a7311ea1ddc",
+    "license": "DINOv3 License",
+    "license_url": "https://huggingface.co/timm/vit_small_patch16_dinov3.lvd1689m/blob/3bf4720a82ec2066db88137180ff1f83a675cef0/LICENSE.md",
+    "method_repository": "https://github.com/Continue-Edge-AI-Lab/Rethinking-Continual-AD",
+    "implementation_note": "CPU float32 timm adaptation of the DINOv3 backbone; original Meta weights/API are not downloaded",
+    "rope_difference": "timm defaults to constructing float32 RoPE periods; Meta's original implementation stores bfloat16 periods. The project's inference pipeline explicitly truncates periods via bfloat16 then restores float32, following the model-card recommendation. This is still a timm API/runtime adaptation and is not claimed to be bitwise identical to Meta's original runtime.",
+    "pipeline_rope_precision_match": "periods.to(torch.bfloat16).to(torch.float32)",
+    "pipeline_token_normalization": "Final backbone LayerNorm output; no additional L2 normalization, following the DINOSaur core source",
+    "input_contract": {
+      "image_shape": [
+        3,
+        224,
+        224
+      ],
+      "patch_size": 16,
+      "embedding_dimension": 384,
+      "prefix_tokens": 5,
+      "patch_tokens": 196,
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    }
+  },
+  "statistics": {
+    "bottle": {
+      "spatial_kcenter_r3": {
+        "image_auroc": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 3
+        },
+        "pixel_auroc": {
+          "mean": 0.9785415439772024,
+          "std": 0.00012071509361073292,
+          "n": 3
+        },
+        "scoring_median_ms": {
+          "mean": 947.8146333276527,
+          "std": 64.8206163273976,
+          "n": 3
+        },
+        "scoring_p95_ms": {
+          "mean": 1574.1906499975203,
+          "std": 291.14530894510636,
+          "n": 3
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 1062.0429726026587,
+          "std": 0.0,
+          "n": 3
+        },
+        "coreset_seconds": {
+          "mean": 2.179407833328393,
+          "std": 0.8487273782242482,
+          "n": 3
+        },
+        "bank_mib": {
+          "mean": 5.7421875,
+          "std": 0.0,
+          "n": 3
+        },
+        "bank_vectors": {
+          "mean": 3920,
+          "std": 0.0,
+          "n": 3
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 3
+        },
+        "seeds": [
+          42,
+          43,
+          44
+        ]
+      },
+      "spatial_random_r3": {
+        "image_auroc": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.9794371282742942,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 1056.3588999939384,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 1772.8290500002913,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 1062.0429726026587,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 0.9322645000065677,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 5.7421875,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 3920,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      },
+      "unrestricted_kcenter": {
+        "image_auroc": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.9784240946899676,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 1050.9966999961762,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 2114.778090002073,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 1062.0429726026587,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 3.131243199997698,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 5.7421875,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 3920,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      },
+      "spatial_kcenter_r0": {
+        "image_auroc": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.9804259508235049,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 83.09569999983069,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 131.23368000233307,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 1062.0429726026587,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 3.131243199997698,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 5.7421875,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 3920,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 1.0,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      }
+    },
+    "screw": {
+      "spatial_kcenter_r3": {
+        "image_auroc": {
+          "mean": 0.7870465259274442,
+          "std": 0.014750003976488672,
+          "n": 3
+        },
+        "pixel_auroc": {
+          "mean": 0.860338210208421,
+          "std": 0.007820293174035193,
+          "n": 3
+        },
+        "scoring_median_ms": {
+          "mean": 999.167249998815,
+          "std": 131.28818073760405,
+          "n": 3
+        },
+        "scoring_p95_ms": {
+          "mean": 1505.6954966644598,
+          "std": 292.2428166571306,
+          "n": 3
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 1241.5162008329996,
+          "std": 0.0,
+          "n": 3
+        },
+        "coreset_seconds": {
+          "mean": 2.4139454333295967,
+          "std": 1.175181667830843,
+          "n": 3
+        },
+        "bank_mib": {
+          "mean": 7.177734375,
+          "std": 0.0,
+          "n": 3
+        },
+        "bank_vectors": {
+          "mean": 4900,
+          "std": 0.0,
+          "n": 3
+        },
+        "f1": {
+          "mean": 0.6232576357955529,
+          "std": 0.05651145986804361,
+          "n": 3
+        },
+        "seeds": [
+          42,
+          43,
+          44
+        ]
+      },
+      "spatial_random_r3": {
+        "image_auroc": {
+          "mean": 0.7003484320557491,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.8452333018686073,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 1011.975050001638,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 1387.3346699954707,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 1241.5162008329996,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 1.0470606999879237,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 7.177734375,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 4900,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 0.4539877300613497,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      },
+      "unrestricted_kcenter": {
+        "image_auroc": {
+          "mean": 0.7913506866161099,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.866838204538024,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 943.6314000049606,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 1560.4878900092444,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 1241.5162008329996,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 3.7671353000041563,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 7.177734375,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 4900,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 0.644808743169399,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      },
+      "spatial_kcenter_r0": {
+        "image_auroc": {
+          "mean": 0.70096331215413,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.8309128141097594,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 134.52954999957,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 376.51624999634765,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 1241.5162008329996,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 3.7671353000041563,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 7.177734375,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 4900,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 0.5617977528089888,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      }
+    },
+    "hazelnut": {
+      "spatial_kcenter_r3": {
+        "image_auroc": {
+          "mean": 0.9909523809523809,
+          "std": 0.0032991443953693297,
+          "n": 3
+        },
+        "pixel_auroc": {
+          "mean": 0.9902557385130288,
+          "std": 0.00026589217462719145,
+          "n": 3
+        },
+        "scoring_median_ms": {
+          "mean": 904.0635500035327,
+          "std": 43.40126428161743,
+          "n": 3
+        },
+        "scoring_p95_ms": {
+          "mean": 1358.3557716655678,
+          "std": 73.88577901289091,
+          "n": 3
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 792.0051391217953,
+          "std": 0.0,
+          "n": 3
+        },
+        "coreset_seconds": {
+          "mean": 2.9641919000035464,
+          "std": 1.1305758133633321,
+          "n": 3
+        },
+        "bank_mib": {
+          "mean": 8.900390625,
+          "std": 0.0,
+          "n": 3
+        },
+        "bank_vectors": {
+          "mean": 6076,
+          "std": 0.0,
+          "n": 3
+        },
+        "f1": {
+          "mean": 0.950726216412491,
+          "std": 0.004465345219222601,
+          "n": 3
+        },
+        "seeds": [
+          42,
+          43,
+          44
+        ]
+      },
+      "spatial_random_r3": {
+        "image_auroc": {
+          "mean": 0.9910714285714286,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.991108822735662,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 1323.0272499931743,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 2374.312370005645,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 792.0051391217953,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 1.358965299994452,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 8.900390625,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 6076,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 0.9333333333333333,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      },
+      "unrestricted_kcenter": {
+        "image_auroc": {
+          "mean": 0.9953571428571428,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.9904927799688125,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 1243.5959500071476,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 1584.7741899953687,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 792.0051391217953,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 2.1699458000075538,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 8.900390625,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 6076,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 0.9481481481481482,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      },
+      "spatial_kcenter_r0": {
+        "image_auroc": {
+          "mean": 0.9892857142857143,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.9905170290302309,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 104.80029999598628,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 173.93688500305868,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 792.0051391217953,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 2.1699458000075538,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 8.900390625,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 6076,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 0.9481481481481482,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      }
+    },
+    "metal_nut": {
+      "spatial_kcenter_r3": {
+        "image_auroc": {
+          "mean": 0.9965786901270772,
+          "std": 0.0004887585532746819,
+          "n": 3
+        },
+        "pixel_auroc": {
+          "mean": 0.9775363421859941,
+          "std": 0.0003952149035000883,
+          "n": 3
+        },
+        "scoring_median_ms": {
+          "mean": 466.21240000240505,
+          "std": 81.21024938738317,
+          "n": 3
+        },
+        "scoring_p95_ms": {
+          "mean": 634.9000166660213,
+          "std": 100.65374413286547,
+          "n": 3
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 557.5392394026032,
+          "std": 0.0,
+          "n": 3
+        },
+        "coreset_seconds": {
+          "mean": 0.8365110666685117,
+          "std": 0.014001325122057044,
+          "n": 3
+        },
+        "bank_mib": {
+          "mean": 5.7421875,
+          "std": 0.0,
+          "n": 3
+        },
+        "bank_vectors": {
+          "mean": 3920,
+          "std": 0.0,
+          "n": 3
+        },
+        "f1": {
+          "mean": 0.983957219251337,
+          "std": 0.0,
+          "n": 3
+        },
+        "seeds": [
+          42,
+          43,
+          44
+        ]
+      },
+      "spatial_random_r3": {
+        "image_auroc": {
+          "mean": 0.9931573802541545,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.9766226842087019,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 397.49339999980293,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 464.0558899991447,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 557.5392394026032,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 0.3797723999887239,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 5.7421875,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 3920,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 0.978494623655914,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      },
+      "unrestricted_kcenter": {
+        "image_auroc": {
+          "mean": 0.9970674486803519,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.9780623744568738,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 580.7797000015853,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 754.2943000022204,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 557.5392394026032,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 0.8524064999946859,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 5.7421875,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 3920,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 0.983957219251337,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      },
+      "spatial_kcenter_r0": {
+        "image_auroc": {
+          "mean": 0.9916911045943304,
+          "std": 0.0,
+          "n": 1
+        },
+        "pixel_auroc": {
+          "mean": 0.9760750803822658,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_median_ms": {
+          "mean": 52.5809999962803,
+          "std": 0.0,
+          "n": 1
+        },
+        "scoring_p95_ms": {
+          "mean": 72.23396000335924,
+          "std": 0.0,
+          "n": 1
+        },
+        "feature_extraction_mean_ms": {
+          "mean": 557.5392394026032,
+          "std": 0.0,
+          "n": 1
+        },
+        "coreset_seconds": {
+          "mean": 0.8524064999946859,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_mib": {
+          "mean": 5.7421875,
+          "std": 0.0,
+          "n": 1
+        },
+        "bank_vectors": {
+          "mean": 3920,
+          "std": 0.0,
+          "n": 1
+        },
+        "f1": {
+          "mean": 0.9735449735449735,
+          "std": 0.0,
+          "n": 1
+        },
+        "seeds": [
+          42
+        ]
+      }
+    }
+  },
+  "runs": {
+    "bottle/seed-42/spatial_kcenter_r0": {
+      "source": "outputs/frontier/bottle/seed-42/spatial_kcenter_r0",
+      "record": "reports/frontier/run_records/bottle/seed-42/spatial_kcenter_r0",
+      "source_sha256": {
+        "summary.json": "cf4a67d96bf69e626f996bcd1cedae9c10480a41c3994743aaf8a25df2e869d7",
+        "config.json": "ee959d3e60d7ba9767510c0512550b3e651e4cdfcb51470c6e5f0440f3195fd6",
+        "predictions.csv": "de2f31bbceb4c339a0a276d4e829125925135503e3a0e93adb9f33c863faf465"
+      }
+    },
+    "bottle/seed-42/spatial_kcenter_r3": {
+      "source": "outputs/frontier/bottle/seed-42/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/bottle/seed-42/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "0b8cfb3a5012126f6161467004c8355c6f611ff20a6cc8207045ab47c55f8830",
+        "config.json": "eeb4d122f1ec75bc6f6b094557b5aea1ebbdd94204815c6d0bef52709d7a4774",
+        "predictions.csv": "0f4d9ea30f8d53fffa0d39178670c14f7cf6f329ff8846e986c0c0919866b3a2"
+      }
+    },
+    "bottle/seed-42/spatial_random_r3": {
+      "source": "outputs/frontier/bottle/seed-42/spatial_random_r3",
+      "record": "reports/frontier/run_records/bottle/seed-42/spatial_random_r3",
+      "source_sha256": {
+        "summary.json": "fa867c202344b1ab2b55a112df1b27fd237001e7dc0cd2c4cca8ce6621badf40",
+        "config.json": "f26cf22445be9999828cc96919f3f723cbe2aada15f1702cfe721801670f0459",
+        "predictions.csv": "28fdf1331c4501ad6be8c803f458681387072a36abc63eb65ebc45f714d3de5a"
+      }
+    },
+    "bottle/seed-42/unrestricted_kcenter": {
+      "source": "outputs/frontier/bottle/seed-42/unrestricted_kcenter",
+      "record": "reports/frontier/run_records/bottle/seed-42/unrestricted_kcenter",
+      "source_sha256": {
+        "summary.json": "2a3c69fc850e4837ea7a591754b698f9c4f27ae2a3f517d662654ccb0ee02d1f",
+        "config.json": "ea6abfea53843673757487f83f464478f7ff4ce3ec042b09e718b0504cb9046a",
+        "predictions.csv": "73c961c08ab5f5194044709137d4344c033d74f4564b43b0d968cce1c73fdd7a"
+      }
+    },
+    "bottle/seed-43/spatial_kcenter_r3": {
+      "source": "outputs/frontier/bottle/seed-43/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/bottle/seed-43/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "7f61811078a61d3392f0fd69f8f72db2146bd1cca81483ebb2197812a5a0a6b3",
+        "config.json": "afa591a29bbbee04fc0954f31d5316b956a3da53d2edeed877e4e3611c78c96d",
+        "predictions.csv": "5c3b8d32f4f33c007f55b736376856678d120cecc7cf694118d902f5328466b8"
+      }
+    },
+    "bottle/seed-44/spatial_kcenter_r3": {
+      "source": "outputs/frontier/bottle/seed-44/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/bottle/seed-44/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "1db27165b99590a9d339d4664b9bf1f069c3ac60354b259ceef315d015aa36ec",
+        "config.json": "21d248d46a094815d24b268a4072615e157618522c5341ca1d29727609fab9a4",
+        "predictions.csv": "e7af765fed13b3ee5d3ca3fe3c421bc5a61f2622f3647cbf7cd1b6e984dfa558"
+      }
+    },
+    "hazelnut/seed-42/spatial_kcenter_r0": {
+      "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r0",
+      "record": "reports/frontier/run_records/hazelnut/seed-42/spatial_kcenter_r0",
+      "source_sha256": {
+        "summary.json": "50654d6b7cf67d40357e08e2f751c3d43a9df84ce69bbd6a85f52f21a24b899a",
+        "config.json": "519f6690e2d03ae8938a8b123ba1b8b53349d9492e55e357536e289acbd2b06d",
+        "predictions.csv": "22e4bdd88ae7ef5239a79beda2f7e76e1d16394d97c3ad8ff3eca37cebf87f5d"
+      }
+    },
+    "hazelnut/seed-42/spatial_kcenter_r3": {
+      "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/hazelnut/seed-42/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "b4b2b3f4a28181c0dcf55106fd3c6d26ca79ca49a85b84c42e61283357bd4921",
+        "config.json": "34ff664930e001455363d37836cc34db0c816eb199258c4a26a344a563870e85",
+        "predictions.csv": "9e604fc710ab6479eb2fe544cf1bf578ba28750d86b30c860c1517aee3980027"
+      }
+    },
+    "hazelnut/seed-42/spatial_random_r3": {
+      "source": "outputs/frontier/hazelnut/seed-42/spatial_random_r3",
+      "record": "reports/frontier/run_records/hazelnut/seed-42/spatial_random_r3",
+      "source_sha256": {
+        "summary.json": "31e28e1e941b080884aa5b6fc0e1c8970cedc0918e9a968e965afc7911734daf",
+        "config.json": "ef2b2d8d9d3d26381ce6b05be1f5908aa48ff269a333c7bd3481caa49f3e993a",
+        "predictions.csv": "71ebf4948fee3bbbe0d5a0176140f2c396f80dfab55f14d1ca7ab0157e3e20cd"
+      }
+    },
+    "hazelnut/seed-42/unrestricted_kcenter": {
+      "source": "outputs/frontier/hazelnut/seed-42/unrestricted_kcenter",
+      "record": "reports/frontier/run_records/hazelnut/seed-42/unrestricted_kcenter",
+      "source_sha256": {
+        "summary.json": "b4ea2694b13bf1ecc2aeb47877471024afdfbd12f314a37f8e411d5c243ca20e",
+        "config.json": "b1efaceaa0765d7f321254356c0bfe134a2236f082dae37ad005f2f2028466cd",
+        "predictions.csv": "167d6b63828fbd7742701dc92b330926e4b78dc04c8545b69699f3c4417d1c4e"
+      }
+    },
+    "hazelnut/seed-43/spatial_kcenter_r3": {
+      "source": "outputs/frontier/hazelnut/seed-43/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/hazelnut/seed-43/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "70ca3483e9ea60827d25c5042abbbd93d5ac2c3e3e1b08b9de7f266e5fecf5b5",
+        "config.json": "41cd03dc9cc06fba02b8819cf401f0d5f277e13dabbfc33fd67754fe808ddf28",
+        "predictions.csv": "1151983eb55b7dbb5b7148363df0bc370d05abd4540a8874e8da08839a06b355"
+      }
+    },
+    "hazelnut/seed-44/spatial_kcenter_r3": {
+      "source": "outputs/frontier/hazelnut/seed-44/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/hazelnut/seed-44/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "94e793e57866e8c346a7386dce5adc0294914bc6b0c6f9cdf4c0432a70e8993b",
+        "config.json": "e5b84a66f802be2788a105c3628460c108d21c617cd55aef6f51072c89f237b5",
+        "predictions.csv": "41c570c1b3c187238402b7749bdec2f24a5360b199b4d7e1816a5b8f48d98b5c"
+      }
+    },
+    "metal_nut/seed-42/spatial_kcenter_r0": {
+      "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r0",
+      "record": "reports/frontier/run_records/metal_nut/seed-42/spatial_kcenter_r0",
+      "source_sha256": {
+        "summary.json": "f72a31b93715e79a0d6dc60cd7e6428eaf96a34eea49d9c2e75871ac4be35a2f",
+        "config.json": "a0e2e30706375673d9c01ef5c1056d0780bdfa1a2072e96b900932eb08203c4a",
+        "predictions.csv": "5b8ad7bf76610fc405bb49becbe8e8a16b53c49dfb6e49d09900811b03d477ae"
+      }
+    },
+    "metal_nut/seed-42/spatial_kcenter_r3": {
+      "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/metal_nut/seed-42/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "567b021abeeef595309bda905b8bff49a2f965f036cb0d9a093b74ea033ca18b",
+        "config.json": "5144d056b2a1233e8b616cc02258819d9c6c71e66df8363914403009c4544bcf",
+        "predictions.csv": "a358f44e83ccc32c2fa42cbcc8007dc41c3ffa760c3731f58852caefbfdbdd93"
+      }
+    },
+    "metal_nut/seed-42/spatial_random_r3": {
+      "source": "outputs/frontier/metal_nut/seed-42/spatial_random_r3",
+      "record": "reports/frontier/run_records/metal_nut/seed-42/spatial_random_r3",
+      "source_sha256": {
+        "summary.json": "350e14e797f8a12fc12b34c38284c0b43341dbd11bdce6ac1563a8ff4782af67",
+        "config.json": "9734fb5fb7516d90c820d53b8788eafc2b3dd0b7ada4f72d44ebfffc9fc815f0",
+        "predictions.csv": "2286851191aa26930ee0dc69ece9b9f4c6dc5c0ab314d3284bcbe775e8488d96"
+      }
+    },
+    "metal_nut/seed-42/unrestricted_kcenter": {
+      "source": "outputs/frontier/metal_nut/seed-42/unrestricted_kcenter",
+      "record": "reports/frontier/run_records/metal_nut/seed-42/unrestricted_kcenter",
+      "source_sha256": {
+        "summary.json": "48a0293ca6f087b36f7d85eeac975a06e5c2a39d6e330da134d6698d538289fa",
+        "config.json": "960b1c41a4972a1805f1945395dbdc9fe9db99eb5ae40210216c0b69c2b5baff",
+        "predictions.csv": "1133c45727df84cdb7d5f39a9c689f99e4cd054aa9452915d3a49080be92b793"
+      }
+    },
+    "metal_nut/seed-43/spatial_kcenter_r3": {
+      "source": "outputs/frontier/metal_nut/seed-43/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/metal_nut/seed-43/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "b68b14ad58210557ca67389a0f65f629df0e8369373f86fd5ae10812dc2d3449",
+        "config.json": "a90052f8ba49807d9a3a4869827abe2bac2ee0713cccff39d01744287079f77d",
+        "predictions.csv": "2c017bdb7a3ca573b2d48d987643b577520d7faf81264c226f9fba0b0cbc32a3"
+      }
+    },
+    "metal_nut/seed-44/spatial_kcenter_r3": {
+      "source": "outputs/frontier/metal_nut/seed-44/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/metal_nut/seed-44/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "d82998ae328f76d707934ef43e0b84e67410e3420566dcf61d2084bdb650d400",
+        "config.json": "e67989c1ab3c4bb81c1aafc1244c5c51fc22a1703ad03e1e387d014db85b4ccc",
+        "predictions.csv": "71b0c1c36093eed916b32f6dff318be54b14374e064776d78ba57cd618f43b33"
+      }
+    },
+    "screw/seed-42/spatial_kcenter_r0": {
+      "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r0",
+      "record": "reports/frontier/run_records/screw/seed-42/spatial_kcenter_r0",
+      "source_sha256": {
+        "summary.json": "81d556fe27170079f3266b93fb380f4c135b3f92211acb735fc8cb56e76dc3cd",
+        "config.json": "a9727b411d9bf7b224e9ce8f95fd8fbde00342cf0f00cb4891b4e21de6e30feb",
+        "predictions.csv": "ec7d027fe395bac7beab9f2e755dbab4b1315af35b1291f331548e516af74da4"
+      }
+    },
+    "screw/seed-42/spatial_kcenter_r3": {
+      "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/screw/seed-42/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "8de65b674b55d5878406c5e2cf0048f95d918fdcd919ba1e711f80639c5837f7",
+        "config.json": "7c99df8fc2522fc51e43681dfde114d244d2d0c1e3c5aac73ca509342e8665d8",
+        "predictions.csv": "e5d7db98f817cadd7391108f7ff7b01151dffbadbe1d50547ed83616876f1262"
+      }
+    },
+    "screw/seed-42/spatial_random_r3": {
+      "source": "outputs/frontier/screw/seed-42/spatial_random_r3",
+      "record": "reports/frontier/run_records/screw/seed-42/spatial_random_r3",
+      "source_sha256": {
+        "summary.json": "14eae37dbfa6cac897bde0d464b9c8c4aae2fa985a7a70bec9cea3f69f2a0cb8",
+        "config.json": "7485721489b644665a7ae887a71269a9c79a021ad0e7741de07fadad501899d8",
+        "predictions.csv": "11e3b8422f7235ecfd3993dd01bf6db26118a591e4056267d0cce5638a66d8e6"
+      }
+    },
+    "screw/seed-42/unrestricted_kcenter": {
+      "source": "outputs/frontier/screw/seed-42/unrestricted_kcenter",
+      "record": "reports/frontier/run_records/screw/seed-42/unrestricted_kcenter",
+      "source_sha256": {
+        "summary.json": "91d625face6ffcf6ca7d5f2b91a1c7bf24606d932d901898c442d95a4970711e",
+        "config.json": "f5849485e89c3a1f0943ed11227f2441ab470171aea95cf6fe87a8413a57d4f7",
+        "predictions.csv": "261c9bb0e03bbbf096998b209ece1f4f851c26e57de2752be028905eb9413743"
+      }
+    },
+    "screw/seed-43/spatial_kcenter_r3": {
+      "source": "outputs/frontier/screw/seed-43/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/screw/seed-43/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "cff37ec6731289a7d64a335dcd5d455f73461f9f0550d1dc7f70aa86ee39faac",
+        "config.json": "1fd02a6a3bd5afe49cbc70d3d7b98e1a83a56fba85c295063c61358e1c6debd4",
+        "predictions.csv": "362678c432b41e96f967a3c7ed0e358bc5cec884615bf7c1992c3fd000c06b38"
+      }
+    },
+    "screw/seed-44/spatial_kcenter_r3": {
+      "source": "outputs/frontier/screw/seed-44/spatial_kcenter_r3",
+      "record": "reports/frontier/run_records/screw/seed-44/spatial_kcenter_r3",
+      "source_sha256": {
+        "summary.json": "91594d08c2853539863d4d83477aa800ab661af5a07849093c4a1330f064f5b6",
+        "config.json": "57b7ea2ac3630f3da7bf2ddb4f522a2ff9fa6da4d3f8ccae397bb13ee7d90ce0",
+        "predictions.csv": "860375a1a8b79d83a53b792e07789bb474a74f3ab698f231ab2ac2506d87faed"
+      }
+    }
+  },
+  "baselines": {
+    "bottle": {
+      "source": "outputs/bottle-20261008-175949-local-64-2000",
+      "record": "reports/frontier/run_records/baselines/bottle",
+      "source_sha256": {
+        "summary.json": "037fb698ba0d1709a494f8105b44ab319504c3d6ad1c3085bc8d87afb703c26e",
+        "config.json": "8956aefd07cf215682d7ab16b62debef567fb18939eaaf2fe127e1293970d387",
+        "predictions.csv": "647fdf6e29432c1929c68522ccc65542763518223d5ce7d6aae950d418192990"
+      }
+    },
+    "hazelnut": {
+      "source": "outputs/hazelnut-20261009-113403-local-64-2000",
+      "record": "reports/frontier/run_records/baselines/hazelnut",
+      "source_sha256": {
+        "summary.json": "2492d4f387ad4e0dfeab0ceb4846d67edc4094b6ec60de70674a5c884d1ebd6b",
+        "config.json": "d5c15c77fd235e6116be2f71513e5e4368bc02f3dc77c41e15f7521fc784fa2b",
+        "predictions.csv": "9ea14074d8b069c45d90e5539700b9e781803c46a48506260b2585349d7679a2"
+      }
+    },
+    "metal_nut": {
+      "source": "outputs/metal_nut-20261009-110813-local-64-2000",
+      "record": "reports/frontier/run_records/baselines/metal_nut",
+      "source_sha256": {
+        "summary.json": "c013c7662b4c4e040d9014b975d68bc158a53767559f1e6def8208a6f8da542f",
+        "config.json": "5461289b2fb28ce6780fedae9e7e430bb2e5df701d5eab4d052091aa372bdc71",
+        "predictions.csv": "274c7e4a0ee0b198c923595b151a7328a10b516b56a94446b3f5a804effb0b44"
+      }
+    },
+    "screw": {
+      "source": "outputs/screw-20261008-183955-local-64-2000",
+      "record": "reports/frontier/run_records/baselines/screw",
+      "source_sha256": {
+        "summary.json": "185b8697e353498a2aca7ecd3a7ed198434ebd18fc7a10485133fd4982265464",
+        "config.json": "bb204a9c28e48a299628430539b61ceb390b1cfdaa8e55a524205035027a31fb",
+        "predictions.csv": "d4724dbac8619dd00903bccae83ccca88db2261cf5a5dced3d45d93961c2c8ab"
+      }
+    }
+  },
+  "examples": {
+    "bottle": [
+      {
+        "source": "outputs/frontier/bottle/seed-42/spatial_kcenter_r3/broken_large-000.png",
+        "record": "reports/frontier/examples/bottle/broken_large-000.png",
+        "sha256": "29207632ff41cfd5741c9a9e8350d57c6ac1b2eaf03986a7d11ebd1012631eba",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/bottle/seed-42/spatial_kcenter_r3/broken_large-001.png",
+        "record": "reports/frontier/examples/bottle/broken_large-001.png",
+        "sha256": "c7525de1cafd528e42d9f468e4acb02876073a5885d3e72b121dbf1686ca3495",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/bottle/seed-42/spatial_kcenter_r3/broken_small-000.png",
+        "record": "reports/frontier/examples/bottle/broken_small-000.png",
+        "sha256": "8305eb024439c7e53a78a4704eca2aa471bdfd5fb1c7ce460b1ef0df374916de",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/bottle/seed-42/spatial_kcenter_r3/broken_small-001.png",
+        "record": "reports/frontier/examples/bottle/broken_small-001.png",
+        "sha256": "5f26c4039551807c4bf470edd41d6e9dc591053d87eea9d1e67d20ce71419e90",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/bottle/seed-42/spatial_kcenter_r3/contamination-000.png",
+        "record": "reports/frontier/examples/bottle/contamination-000.png",
+        "sha256": "d913b15718837b5da93341c6336aad0c3abbd09305b0a6f1e923670730e85357",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/bottle/seed-42/spatial_kcenter_r3/contamination-001.png",
+        "record": "reports/frontier/examples/bottle/contamination-001.png",
+        "sha256": "7efc551048ba457197488b565874db16f7538bf33ebf8af6f979ed80a2263ab4",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/bottle/seed-42/spatial_kcenter_r3/good-000.png",
+        "record": "reports/frontier/examples/bottle/good-000.png",
+        "sha256": "9a2d9693c777f23ee8792caaba9929fa020c7ebf618706f232fe581bcef73d87",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/bottle/seed-42/spatial_kcenter_r3/good-001.png",
+        "record": "reports/frontier/examples/bottle/good-001.png",
+        "sha256": "10140d1b01d8c6754e3f9fae6bfe21a90dbed57505133e763d8a52f8f670315c",
+        "threshold_error_example": false
+      }
+    ],
+    "screw": [
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/error-good-004.png",
+        "record": "reports/frontier/examples/screw/error-good-004.png",
+        "sha256": "1000ba1530d4a196221099cf116e24f3028bba5af76ce7c89ab06bdadb72d5ae",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/error-good-008.png",
+        "record": "reports/frontier/examples/screw/error-good-008.png",
+        "sha256": "d2205fe1403b344f0fdf0babfe128585ec0f229244036158765b03ea217b82ad",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/error-good-014.png",
+        "record": "reports/frontier/examples/screw/error-good-014.png",
+        "sha256": "c77e87c757f25d6190ce36201befb9307b2fcb869c0f9ee01abb339c8a5cd5a4",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/error-good-026.png",
+        "record": "reports/frontier/examples/screw/error-good-026.png",
+        "sha256": "463ada64a9a30cbc66ee9220298f9ded5fab85a6413fd785a9248a2a74c62038",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/error-good-035.png",
+        "record": "reports/frontier/examples/screw/error-good-035.png",
+        "sha256": "9b7b2e955146c7d05e81ed989ccdbf40674eefae3b747dd98d38baa18eb25f76",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/error-manipulated_front-002.png",
+        "record": "reports/frontier/examples/screw/error-manipulated_front-002.png",
+        "sha256": "e7c510c16839e7d0215980542bb3f12ab616ead430283fa409271de72b00b762",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/error-manipulated_front-004.png",
+        "record": "reports/frontier/examples/screw/error-manipulated_front-004.png",
+        "sha256": "c96770f19eaf72a4b2ee92d6efc7cb1857acb9576669e08e1688139a216eb8b0",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/error-manipulated_front-008.png",
+        "record": "reports/frontier/examples/screw/error-manipulated_front-008.png",
+        "sha256": "7e8ee350a292871959ae9fb629a785fff983b6c53f177da624a493a9a3e05364",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/error-thread_side-000.png",
+        "record": "reports/frontier/examples/screw/error-thread_side-000.png",
+        "sha256": "95107a7964d0abd209b376184abb7cb129da8d28341a2ef9dd6676dcd0d1f8e4",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/error-thread_side-001.png",
+        "record": "reports/frontier/examples/screw/error-thread_side-001.png",
+        "sha256": "615ce2a31381a17f4e215ee82630cb30681ba6e2e7721ddce7cabc1d13623d3f",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/good-000.png",
+        "record": "reports/frontier/examples/screw/good-000.png",
+        "sha256": "28c7fe12d81d3cf4a14fe59f3675a5f3b7c389efdde1c859a585c96e280839aa",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/good-001.png",
+        "record": "reports/frontier/examples/screw/good-001.png",
+        "sha256": "d7d27f7ea7549eaee79573f524bfbcc93301cc9ceff8cc5b374bd24b902e1a48",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/manipulated_front-000.png",
+        "record": "reports/frontier/examples/screw/manipulated_front-000.png",
+        "sha256": "dd3b76db24d8b1bedae653fc85e0383be2d8f99ef6870af70f731ad2b330e43b",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/manipulated_front-001.png",
+        "record": "reports/frontier/examples/screw/manipulated_front-001.png",
+        "sha256": "aabfacd81a47b866aaf26b65f04ae0598b45af9691d061b39b777d4c952397f4",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/scratch_head-000.png",
+        "record": "reports/frontier/examples/screw/scratch_head-000.png",
+        "sha256": "83352b60812ee950bca5c962dff7619281bf9eaee4c05262ae0c35c5661f0fd3",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/scratch_head-001.png",
+        "record": "reports/frontier/examples/screw/scratch_head-001.png",
+        "sha256": "e3e64e5c9aaa2bb1d9f1443f10b5eb687591ca16c26824c1ca954449ec2dc87c",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/scratch_neck-000.png",
+        "record": "reports/frontier/examples/screw/scratch_neck-000.png",
+        "sha256": "9045e59cbae329dbb66781de20ed8623587355f28b005ed8f8f7286572a47e0c",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/scratch_neck-001.png",
+        "record": "reports/frontier/examples/screw/scratch_neck-001.png",
+        "sha256": "f83755bf6639f34fb8511af8287c1603de9241e925062a889f225932c268e79f",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/thread_top-000.png",
+        "record": "reports/frontier/examples/screw/thread_top-000.png",
+        "sha256": "e477d207a7a3c2879e5bd631fe4ae6554bbbbded6430467896709d43a0da69b0",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/screw/seed-42/spatial_kcenter_r3/thread_top-001.png",
+        "record": "reports/frontier/examples/screw/thread_top-001.png",
+        "sha256": "dd4d972fba05792718cea6a40e7c976f440a888b621d63b0180dcdcc99f8dd66",
+        "threshold_error_example": false
+      }
+    ],
+    "hazelnut": [
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/crack-000.png",
+        "record": "reports/frontier/examples/hazelnut/crack-000.png",
+        "sha256": "5a8d848e0fc026627ec508d4ae26f8da7055a87269bc0a897f39f9b8120be3d8",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/crack-001.png",
+        "record": "reports/frontier/examples/hazelnut/crack-001.png",
+        "sha256": "3f027ee4f035fbfb5064a8900aa2b47a8600e40f7c3478cd1fa1d5b4faf45314",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/cut-001.png",
+        "record": "reports/frontier/examples/hazelnut/cut-001.png",
+        "sha256": "0dd4322b3595bab206bd8dd6c1a21686137c4083251a31da5c96f1b023b8696c",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/error-cut-000.png",
+        "record": "reports/frontier/examples/hazelnut/error-cut-000.png",
+        "sha256": "58a6393e393787b5c231b19b63f5336f8e82d3868461f2fa5b86cd25a19e1f3f",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/error-cut-003.png",
+        "record": "reports/frontier/examples/hazelnut/error-cut-003.png",
+        "sha256": "812558749c3cd186e3f0be411c4a4daf6fe2a0aac0552bc63b5a84844e0cc906",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/error-cut-005.png",
+        "record": "reports/frontier/examples/hazelnut/error-cut-005.png",
+        "sha256": "449aea8c1ad162f17a9015f9726ce3713c68acb42ff35608b1f0b2e2dc8e5494",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/error-cut-010.png",
+        "record": "reports/frontier/examples/hazelnut/error-cut-010.png",
+        "sha256": "5936766ec1582d01e291ea17e3e57327a847ac1f0c98aa5a9daaa3f6e87ad316",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/error-good-002.png",
+        "record": "reports/frontier/examples/hazelnut/error-good-002.png",
+        "sha256": "0de29c57666a3eec39b8d01316642098102fad41df3f92a78efbfb68a8f7ba5f",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/error-print-015.png",
+        "record": "reports/frontier/examples/hazelnut/error-print-015.png",
+        "sha256": "ee2e5f9458c3942825f82d34d777d36b6b46024b6a963f3c8e85ed5c1857d33f",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/good-000.png",
+        "record": "reports/frontier/examples/hazelnut/good-000.png",
+        "sha256": "3a88c9171d7bf5c0148de509978609329729e62569038b6a26bbefbe5eeb0a53",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/good-001.png",
+        "record": "reports/frontier/examples/hazelnut/good-001.png",
+        "sha256": "4f3738e9e8e67f4654b10b372e89a4a697df22f9ac6df62edc4bbd9d8b7c982f",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/hole-000.png",
+        "record": "reports/frontier/examples/hazelnut/hole-000.png",
+        "sha256": "14cfa41f329331d54eeb67ff3e9d61a9c3e0780661f2c171a12331175b492cfb",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/hole-001.png",
+        "record": "reports/frontier/examples/hazelnut/hole-001.png",
+        "sha256": "2b6754dc60baef7d05451e16d319630cee70e49becd64941117c28a8143cb249",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/print-000.png",
+        "record": "reports/frontier/examples/hazelnut/print-000.png",
+        "sha256": "a9cbfcce480bf97dd46ad96b06995fa6e9abae284a02c11cc39a49c57985f168",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/hazelnut/seed-42/spatial_kcenter_r3/print-001.png",
+        "record": "reports/frontier/examples/hazelnut/print-001.png",
+        "sha256": "4bdba5fe5b303b7ab5b353345a9d453f12c1ca760a24e640e6d7bff1ffe78944",
+        "threshold_error_example": false
+      }
+    ],
+    "metal_nut": [
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/bent-000.png",
+        "record": "reports/frontier/examples/metal_nut/bent-000.png",
+        "sha256": "4db2517488821cf3c22e97443b426760cffe9c0960583e3e7e6124ebaec6ac84",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/bent-001.png",
+        "record": "reports/frontier/examples/metal_nut/bent-001.png",
+        "sha256": "22531302eb0b8aea12556b492176832ef2f57b01dcd31d347b33b17b120b4d91",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/color-000.png",
+        "record": "reports/frontier/examples/metal_nut/color-000.png",
+        "sha256": "1e6faf9ffd8eede2eace31d769f5e0c4266752f333964871e6eb312522c893f5",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/color-001.png",
+        "record": "reports/frontier/examples/metal_nut/color-001.png",
+        "sha256": "c30bf700ace66368b4748d177ca73f16ac03576bcc82e1f2070816151c021999",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/error-good-008.png",
+        "record": "reports/frontier/examples/metal_nut/error-good-008.png",
+        "sha256": "569b30cc2a195b77a112c6e9c22ece8f11b781ce0aa779a2c2529db973910097",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/error-good-016.png",
+        "record": "reports/frontier/examples/metal_nut/error-good-016.png",
+        "sha256": "af954121b8b75c1243730753811bdf15720a95f09b7957ce0ffabe7e2fb5762e",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/error-scratch-020.png",
+        "record": "reports/frontier/examples/metal_nut/error-scratch-020.png",
+        "sha256": "3dc3451f0bc6876a39839fb9a95a33413e8735c1891ef54b96dbf6a9aff03bbc",
+        "threshold_error_example": true
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/flip-000.png",
+        "record": "reports/frontier/examples/metal_nut/flip-000.png",
+        "sha256": "64c4d5bb6fe74176800f43b0ab28aea91d2cba29b4be911566096306aa5fae64",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/flip-001.png",
+        "record": "reports/frontier/examples/metal_nut/flip-001.png",
+        "sha256": "a94b0c64ba2fb50f790591ef2f4754aa62febcc5f891bbfc6a0bf6a3bb0b287b",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/good-000.png",
+        "record": "reports/frontier/examples/metal_nut/good-000.png",
+        "sha256": "0c640ae62c53bb3acf85b8e5318d34ae6667bd7b85284ab1daa1d50346d92bce",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/good-001.png",
+        "record": "reports/frontier/examples/metal_nut/good-001.png",
+        "sha256": "a484df4ccc139aa55f329b8cf46de70ec6691edfa60e7e953c5f95aac43ce82a",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/scratch-000.png",
+        "record": "reports/frontier/examples/metal_nut/scratch-000.png",
+        "sha256": "bebda3b3fdc3b7841ab848b07c31d720e222503b4c6a1bf72edf3cce5948e056",
+        "threshold_error_example": false
+      },
+      {
+        "source": "outputs/frontier/metal_nut/seed-42/spatial_kcenter_r3/scratch-001.png",
+        "record": "reports/frontier/examples/metal_nut/scratch-001.png",
+        "sha256": "077f940e04d2b3f6b7990dc95b725866fbed83a59e54b57f4181e291685eee21",
+        "threshold_error_example": false
+      }
+    ]
+  },
+  "defect_breakdowns_seed42": {
+    "bottle": {
+      "primary_seed42": {
+        "broken_large": {
+          "images": 20,
+          "tp": 20,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "broken_small": {
+          "images": 22,
+          "tp": 22,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "contamination": {
+          "images": 21,
+          "tp": 21,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "good": {
+          "images": 20,
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 20
+        }
+      },
+      "baseline": {
+        "broken_large": {
+          "images": 20,
+          "tp": 20,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "broken_small": {
+          "images": 22,
+          "tp": 22,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "contamination": {
+          "images": 21,
+          "tp": 21,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "good": {
+          "images": 20,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 19
+        }
+      }
+    },
+    "screw": {
+      "primary_seed42": {
+        "good": {
+          "images": 41,
+          "tp": 0,
+          "fp": 5,
+          "fn": 0,
+          "tn": 36
+        },
+        "manipulated_front": {
+          "images": 24,
+          "tp": 14,
+          "fp": 0,
+          "fn": 10,
+          "tn": 0
+        },
+        "scratch_head": {
+          "images": 24,
+          "tp": 6,
+          "fp": 0,
+          "fn": 18,
+          "tn": 0
+        },
+        "scratch_neck": {
+          "images": 25,
+          "tp": 19,
+          "fp": 0,
+          "fn": 6,
+          "tn": 0
+        },
+        "thread_side": {
+          "images": 23,
+          "tp": 6,
+          "fp": 0,
+          "fn": 17,
+          "tn": 0
+        },
+        "thread_top": {
+          "images": 23,
+          "tp": 15,
+          "fp": 0,
+          "fn": 8,
+          "tn": 0
+        }
+      },
+      "baseline": {
+        "good": {
+          "images": 41,
+          "tp": 0,
+          "fp": 5,
+          "fn": 0,
+          "tn": 36
+        },
+        "manipulated_front": {
+          "images": 24,
+          "tp": 2,
+          "fp": 0,
+          "fn": 22,
+          "tn": 0
+        },
+        "scratch_head": {
+          "images": 24,
+          "tp": 1,
+          "fp": 0,
+          "fn": 23,
+          "tn": 0
+        },
+        "scratch_neck": {
+          "images": 25,
+          "tp": 3,
+          "fp": 0,
+          "fn": 22,
+          "tn": 0
+        },
+        "thread_side": {
+          "images": 23,
+          "tp": 2,
+          "fp": 0,
+          "fn": 21,
+          "tn": 0
+        },
+        "thread_top": {
+          "images": 23,
+          "tp": 3,
+          "fp": 0,
+          "fn": 20,
+          "tn": 0
+        }
+      }
+    },
+    "hazelnut": {
+      "primary_seed42": {
+        "crack": {
+          "images": 18,
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "cut": {
+          "images": 17,
+          "tp": 13,
+          "fp": 0,
+          "fn": 4,
+          "tn": 0
+        },
+        "good": {
+          "images": 40,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 39
+        },
+        "hole": {
+          "images": 18,
+          "tp": 18,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "print": {
+          "images": 17,
+          "tp": 16,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        }
+      },
+      "baseline": {
+        "crack": {
+          "images": 18,
+          "tp": 16,
+          "fp": 0,
+          "fn": 2,
+          "tn": 0
+        },
+        "cut": {
+          "images": 17,
+          "tp": 15,
+          "fp": 0,
+          "fn": 2,
+          "tn": 0
+        },
+        "good": {
+          "images": 40,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 38
+        },
+        "hole": {
+          "images": 18,
+          "tp": 17,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "print": {
+          "images": 17,
+          "tp": 6,
+          "fp": 0,
+          "fn": 11,
+          "tn": 0
+        }
+      }
+    },
+    "metal_nut": {
+      "primary_seed42": {
+        "bent": {
+          "images": 25,
+          "tp": 25,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "color": {
+          "images": 22,
+          "tp": 22,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "flip": {
+          "images": 23,
+          "tp": 23,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "good": {
+          "images": 22,
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 20
+        },
+        "scratch": {
+          "images": 23,
+          "tp": 22,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        }
+      },
+      "baseline": {
+        "bent": {
+          "images": 25,
+          "tp": 15,
+          "fp": 0,
+          "fn": 10,
+          "tn": 0
+        },
+        "color": {
+          "images": 22,
+          "tp": 7,
+          "fp": 0,
+          "fn": 15,
+          "tn": 0
+        },
+        "flip": {
+          "images": 23,
+          "tp": 20,
+          "fp": 0,
+          "fn": 3,
+          "tn": 0
+        },
+        "good": {
+          "images": 22,
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 21
+        },
+        "scratch": {
+          "images": 23,
+          "tp": 15,
+          "fp": 0,
+          "fn": 8,
+          "tn": 0
+        }
+      }
+    }
+  },
+  "continual": {
+    "seed": 42,
+    "protocol": "Category addition with frozen backbone and retained category banks; unknown task routed by CLS prototype.",
+    "stages": [
+      {
+        "stage": 1,
+        "added_category": "bottle",
+        "categories": [
+          "bottle"
+        ],
+        "results": [
+          {
+            "category": "bottle",
+            "routing_accuracy": 1.0,
+            "image_auroc": 1.0,
+            "tp": 63,
+            "fp": 0,
+            "fn": 0,
+            "tn": 20,
+            "test_images": 83
+          }
+        ],
+        "bank_hashes": {
+          "bottle": "ebda3e3fe5e00e56f66cd435db0b10b53eefdf394aa573667f90fd1bc31ebace"
+        }
+      },
+      {
+        "stage": 2,
+        "added_category": "screw",
+        "categories": [
+          "bottle",
+          "screw"
+        ],
+        "results": [
+          {
+            "category": "bottle",
+            "routing_accuracy": 1.0,
+            "image_auroc": 1.0,
+            "tp": 63,
+            "fp": 0,
+            "fn": 0,
+            "tn": 20,
+            "test_images": 83
+          },
+          {
+            "category": "screw",
+            "routing_accuracy": 1.0,
+            "image_auroc": 0.7962697274031564,
+            "tp": 60,
+            "fp": 5,
+            "fn": 59,
+            "tn": 36,
+            "test_images": 160
+          }
+        ],
+        "bank_hashes": {
+          "bottle": "ebda3e3fe5e00e56f66cd435db0b10b53eefdf394aa573667f90fd1bc31ebace",
+          "screw": "ebab2116b1b464776025177da8bdd9b0d913bbf072ba2c1ec8aaad37f33e8b1b"
+        }
+      },
+      {
+        "stage": 3,
+        "added_category": "hazelnut",
+        "categories": [
+          "bottle",
+          "screw",
+          "hazelnut"
+        ],
+        "results": [
+          {
+            "category": "bottle",
+            "routing_accuracy": 1.0,
+            "image_auroc": 1.0,
+            "tp": 63,
+            "fp": 0,
+            "fn": 0,
+            "tn": 20,
+            "test_images": 83
+          },
+          {
+            "category": "screw",
+            "routing_accuracy": 1.0,
+            "image_auroc": 0.7962697274031564,
+            "tp": 60,
+            "fp": 5,
+            "fn": 59,
+            "tn": 36,
+            "test_images": 160
+          },
+          {
+            "category": "hazelnut",
+            "routing_accuracy": 1.0,
+            "image_auroc": 0.9928571428571429,
+            "tp": 65,
+            "fp": 1,
+            "fn": 5,
+            "tn": 39,
+            "test_images": 110
+          }
+        ],
+        "bank_hashes": {
+          "bottle": "ebda3e3fe5e00e56f66cd435db0b10b53eefdf394aa573667f90fd1bc31ebace",
+          "screw": "ebab2116b1b464776025177da8bdd9b0d913bbf072ba2c1ec8aaad37f33e8b1b",
+          "hazelnut": "502235cbe28fdefdc763beea93cccdc51ff74e3689371af360d33daabc74b634"
+        }
+      },
+      {
+        "stage": 4,
+        "added_category": "metal_nut",
+        "categories": [
+          "bottle",
+          "screw",
+          "hazelnut",
+          "metal_nut"
+        ],
+        "results": [
+          {
+            "category": "bottle",
+            "routing_accuracy": 1.0,
+            "image_auroc": 1.0,
+            "tp": 63,
+            "fp": 0,
+            "fn": 0,
+            "tn": 20,
+            "test_images": 83
+          },
+          {
+            "category": "screw",
+            "routing_accuracy": 1.0,
+            "image_auroc": 0.7962697274031564,
+            "tp": 60,
+            "fp": 5,
+            "fn": 59,
+            "tn": 36,
+            "test_images": 160
+          },
+          {
+            "category": "hazelnut",
+            "routing_accuracy": 1.0,
+            "image_auroc": 0.9928571428571429,
+            "tp": 65,
+            "fp": 1,
+            "fn": 5,
+            "tn": 39,
+            "test_images": 110
+          },
+          {
+            "category": "metal_nut",
+            "routing_accuracy": 1.0,
+            "image_auroc": 0.9970674486803519,
+            "tp": 92,
+            "fp": 2,
+            "fn": 1,
+            "tn": 20,
+            "test_images": 115
+          }
+        ],
+        "bank_hashes": {
+          "bottle": "ebda3e3fe5e00e56f66cd435db0b10b53eefdf394aa573667f90fd1bc31ebace",
+          "screw": "ebab2116b1b464776025177da8bdd9b0d913bbf072ba2c1ec8aaad37f33e8b1b",
+          "hazelnut": "502235cbe28fdefdc763beea93cccdc51ff74e3689371af360d33daabc74b634",
+          "metal_nut": "86a4f3b4079335d8b42db3bb7a459c1f8d35d389ac86eaff303d6c329ed9d114"
+        }
+      }
+    ],
+    "bank_contents_unchanged": true,
+    "note": "Unchanged banks do not guarantee unchanged automatically routed predictions. Routing errors and metric changes are reported.",
+    "score_reuse": "Exact seed42 scores reused only when routed to the original category; cross-category routes recomputed."
+  },
+  "metric_note": "Pixel AUROC on 224 grid; scoring time excludes feature extraction; repeated seeds are not independent test sets",
+  "release_manifest": "release/frontier/manifest.json"
+}

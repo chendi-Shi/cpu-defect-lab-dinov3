@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "unit_tests": 12,
+  "integration_checks": [
+    "HTML page served",
+    "Both released categories listed",
+    "bottle/normal: HTTP score agrees with offline batch score",
+    "bottle/defect: HTTP score agrees with offline batch score",
+    "screw/normal: HTTP score agrees with offline batch score",
+    "screw/defect: HTTP score agrees with offline batch score",
+    "Invalid image rejected with HTTP 400",
+    "Unknown category rejected with HTTP 400",
+    "Wrong content type rejected with HTTP 415",
+    "Cross-origin inference rejected with HTTP 403",
+    "Released banks reload with weights_only=True"
+  ],
+  "http_predictions": [
+    {
+      "category": "bottle",
+      "example": "normal",
+      "score": 0.4389262795448303,
+      "anomalous": false,
+      "inference_ms": 1479.617999997572,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "bottle",
+      "example": "defect",
+      "score": 0.9240774512290955,
+      "anomalous": true,
+      "inference_ms": 818.104800004221,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "screw",
+      "example": "normal",
+      "score": 0.7150947451591492,
+      "anomalous": false,
+      "inference_ms": 155.50660000008065,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "screw",
+      "example": "defect",
+      "score": 0.7461884617805481,
+      "anomalous": false,
+      "inference_ms": 228.7450000003446,
+      "offline_score_difference": 0.0
+    }
+  ],
+  "release_runs": {
+    "bottle": "bottle-20261008-175949-local-64-2000",
+    "screw": "screw-20261008-183955-local-64-2000",
+    "bottle-validation": "bottle-20261008-182633-local-64-2000"
+  },
+  "frontend_js_syntax": "passed",
+  "browser_visual_check": {
+    "status": "passed",
+    "browser": "Codex in-app browser",
+    "url": "http://127.0.0.1:18765/",
+    "checks": [
+      "Real PNG file upload through file chooser: bottle/test/good/000.png; score 0.4389; normal prediction; heatmap visible",
+      "Category selector includes bottle and screw research control",
+      "Switch category clears previous input and result",
+      "Screw defect example: score 0.7462, threshold 0.8182; missed anomaly honestly displayed",
+      "Screw performance limitation visible in category note",
+      "Bottle defect example: score 0.9241, threshold 0.5569; anomaly and heatmap visible",
+      "Desktop full-page visual inspection passed: controls, metrics, images, text unobstructed"
+    ],
+    "screenshot": "reports/DEMO_SCREENSHOT.jpg",
+    "scope": "Observed interactions and desktop visual layout; does not claim all devices tested."
+  },
+  "note": "HTTP upload inference and JavaScript syntax checked; browser evidence is stored separately."
+}

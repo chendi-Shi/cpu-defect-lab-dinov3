@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "date_local": "2026-10-09",
+  "url": "http://127.0.0.1:18765/",
+  "browser": "Codex in-app browser",
+  "method": "Actual browser clicks, file chooser upload and rendered result inspection",
+  "catalog": {
+    "count": 7,
+    "default": "dinov3-bottle",
+    "models": [
+      "dinov3-bottle",
+      "dinov3-screw",
+      "dinov3-hazelnut",
+      "dinov3-metal_nut",
+      "dinov3-auto",
+      "bottle",
+      "screw"
+    ]
+  },
+  "checks": [
+    "Reloaded new server; all five DINOSaur options and two ResNet18 baselines visible",
+    "Loaded real bottle normal example and ran detection",
+    "Normal result, method, category, score, threshold and heatmap visibly rendered",
+    "Switch to automatic mode cleared image, heatmap and scores, and disabled detection until a new image was selected",
+    "Actual file chooser uploaded bottle/test/broken_large/000.png",
+    "Uploaded image preview rendered before detection",
+    "Automatic route selected bottle; abnormal decision, method, score, threshold and heatmap visibly rendered",
+    "Known-category routing limitation and per-image heatmap scaling note visible",
+    "Full-page screenshot inspected with no clipping or overlapping text",
+    "Browser error logs empty"
+  ],
+  "predictions": [
+    {
+      "model": "dinov3-bottle",
+      "path": "data/mvtec/bottle/test/good/000.png",
+      "input": "normal example button",
+      "selected_category": "bottle",
+      "score_displayed": 1.6323,
+      "threshold_displayed": 1.9396,
+      "anomalous": false,
+      "inference_ms_displayed": 3511
+    },
+    {
+      "model": "dinov3-auto",
+      "path": "data/mvtec/bottle/test/broken_large/000.png",
+      "input": "actual file chooser upload",
+      "selected_category": "bottle",
+      "score_displayed": 5.0524,
+      "threshold_displayed": 1.9396,
+      "anomalous": true,
+      "inference_ms_displayed": 1904
+    }
+  ],
+  "cli_smoke": {
+    "exit_code": 0,
+    "model": "dinov3-auto",
+    "path": "data/mvtec/bottle/test/broken_large/000.png",
+    "selected_category": "bottle",
+    "score": 5.0524001121521,
+    "threshold": 1.9396125078201294,
+    "anomalous": true,
+    "output_directory": "reports/frontier_cli_smoke",
+    "outputs": [
+      "original.png",
+      "heatmap.png",
+      "prediction.json"
+    ]
+  },
+  "console_errors": [],
+  "screenshot": "reports/FRONTIER_DEMO_SCREENSHOT.jpg",
+  "note": "Browser timings are individual observations under current background load, not a speed benchmark. All four categories and both normal/defect paths additionally passed manual and automatic HTTP checks in FRONTIER_QA.json."
+}

@@ -1,0 +1,29 @@
+{
+  "category": "screw",
+  "variant": "spatial_kcenter_r3",
+  "seed": 44,
+  "image_auroc": 0.7700348432055749,
+  "pixel_auroc": 0.8619361720826868,
+  "threshold": 2.6912423729896546,
+  "threshold_metrics": {
+    "tp": 61,
+    "fp": 5,
+    "fn": 58,
+    "tn": 36,
+    "precision": 0.9242424242424242,
+    "recall": 0.5126050420168067,
+    "f1": 0.6594594594594595
+  },
+  "bank_vectors": 4900,
+  "bank_mib": 7.177734375,
+  "scoring_median_ms": 1125.43955000001,
+  "scoring_p95_ms": 1830.565719995502,
+  "feature_extraction_mean_ms": 1241.5162008329996,
+  "coreset_seconds": 1.6495447999914177,
+  "fit_images": 256,
+  "calibration_images": 64,
+  "test_images": 160,
+  "smoke_run": false,
+  "feature_cache_hit": false,
+  "timing_note": "Scoring includes map interpolation; excludes feature extraction, image IO, metrics and drawing."
+}

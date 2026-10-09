@@ -1,0 +1,346 @@
+{
+  "status": "passed",
+  "unit_tests": 24,
+  "integration_checks": [
+    "24 image AUROC records independently recomputed from positive/negative score pairs",
+    "HTML page served",
+    "Four DINOSaur categories, automatic routing and two legacy baselines listed",
+    "bottle/normal: uploaded HTTP image agrees with fixed seed42 offline score",
+    "bottle/normal: automatic CLS route and selected-bank score agree with offline routing",
+    "bottle/defect: uploaded HTTP image agrees with fixed seed42 offline score",
+    "bottle/defect: automatic CLS route and selected-bank score agree with offline routing",
+    "screw/normal: uploaded HTTP image agrees with fixed seed42 offline score",
+    "screw/normal: automatic CLS route and selected-bank score agree with offline routing",
+    "screw/defect: uploaded HTTP image agrees with fixed seed42 offline score",
+    "screw/defect: automatic CLS route and selected-bank score agree with offline routing",
+    "hazelnut/normal: uploaded HTTP image agrees with fixed seed42 offline score",
+    "hazelnut/normal: automatic CLS route and selected-bank score agree with offline routing",
+    "hazelnut/defect: uploaded HTTP image agrees with fixed seed42 offline score",
+    "hazelnut/defect: automatic CLS route and selected-bank score agree with offline routing",
+    "metal_nut/normal: uploaded HTTP image agrees with fixed seed42 offline score",
+    "metal_nut/normal: automatic CLS route and selected-bank score agree with offline routing",
+    "metal_nut/defect: uploaded HTTP image agrees with fixed seed42 offline score",
+    "metal_nut/defect: automatic CLS route and selected-bank score agree with offline routing",
+    "Invalid image/model/example, content type, origin and missing path rejected"
+  ],
+  "http_predictions": [
+    {
+      "category": "bottle",
+      "kind": "normal",
+      "path": "test/good/000.png",
+      "score": 1.6322569847106934,
+      "threshold": 1.9396125078201294,
+      "anomalous": false,
+      "inference_ms": 1758.2878999965033,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "bottle",
+      "kind": "auto-normal",
+      "selected_category": "bottle",
+      "score": 1.6322569847106934,
+      "anomalous": false,
+      "inference_ms": 1159.7106999979587
+    },
+    {
+      "category": "bottle",
+      "kind": "defect",
+      "path": "test/broken_large/000.png",
+      "score": 5.0524001121521,
+      "threshold": 1.9396125078201294,
+      "anomalous": true,
+      "inference_ms": 907.7770000003511,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "bottle",
+      "kind": "auto-defect",
+      "selected_category": "bottle",
+      "score": 5.0524001121521,
+      "anomalous": true,
+      "inference_ms": 1039.2324999993434
+    },
+    {
+      "category": "screw",
+      "kind": "normal",
+      "path": "test/good/000.png",
+      "score": 2.4545209407806396,
+      "threshold": 2.6457304477691648,
+      "anomalous": false,
+      "inference_ms": 1126.6818000003695,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "screw",
+      "kind": "auto-normal",
+      "selected_category": "screw",
+      "score": 2.4545209407806396,
+      "anomalous": false,
+      "inference_ms": 1724.035899998853
+    },
+    {
+      "category": "screw",
+      "kind": "defect",
+      "path": "test/manipulated_front/000.png",
+      "score": 2.73860764503479,
+      "threshold": 2.6457304477691648,
+      "anomalous": true,
+      "inference_ms": 10222.317099993234,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "screw",
+      "kind": "auto-defect",
+      "selected_category": "screw",
+      "score": 2.73860764503479,
+      "anomalous": true,
+      "inference_ms": 1697.7784000046086
+    },
+    {
+      "category": "hazelnut",
+      "kind": "normal",
+      "path": "test/good/000.png",
+      "score": 3.437626600265503,
+      "threshold": 3.6273547768592835,
+      "anomalous": false,
+      "inference_ms": 2443.667600004119,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "hazelnut",
+      "kind": "auto-normal",
+      "selected_category": "hazelnut",
+      "score": 3.437626600265503,
+      "anomalous": false,
+      "inference_ms": 10109.932500010473
+    },
+    {
+      "category": "hazelnut",
+      "kind": "defect",
+      "path": "test/crack/000.png",
+      "score": 4.773355960845947,
+      "threshold": 3.6273547768592835,
+      "anomalous": true,
+      "inference_ms": 979.7413000051165,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "hazelnut",
+      "kind": "auto-defect",
+      "selected_category": "hazelnut",
+      "score": 4.773355960845947,
+      "anomalous": true,
+      "inference_ms": 1178.817899999558
+    },
+    {
+      "category": "metal_nut",
+      "kind": "normal",
+      "path": "test/good/000.png",
+      "score": 1.9571900367736816,
+      "threshold": 2.32310266494751,
+      "anomalous": false,
+      "inference_ms": 981.1326000053668,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "metal_nut",
+      "kind": "auto-normal",
+      "selected_category": "metal_nut",
+      "score": 1.9571900367736816,
+      "anomalous": false,
+      "inference_ms": 952.4107000033837
+    },
+    {
+      "category": "metal_nut",
+      "kind": "defect",
+      "path": "test/bent/000.png",
+      "score": 3.8342676162719727,
+      "threshold": 2.32310266494751,
+      "anomalous": true,
+      "inference_ms": 1064.7235999931581,
+      "offline_score_difference": 0.0
+    },
+    {
+      "category": "metal_nut",
+      "kind": "auto-defect",
+      "selected_category": "metal_nut",
+      "score": 3.8342676162719727,
+      "anomalous": true,
+      "inference_ms": 745.8279999991646
+    }
+  ],
+  "published_seed": 42,
+  "weights_sha256": "2a1ec16ae28ffa07bc0ead0241ee7df9fc26451fe6f9f839b7b3afa0a906b040",
+  "independent_image_auroc_audit": [
+    {
+      "category": "bottle",
+      "seed": 42,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 1.0,
+      "difference": 0.0
+    },
+    {
+      "category": "bottle",
+      "seed": 42,
+      "variant": "spatial_random_r3",
+      "pairwise_image_auroc": 1.0,
+      "difference": 0.0
+    },
+    {
+      "category": "bottle",
+      "seed": 42,
+      "variant": "unrestricted_kcenter",
+      "pairwise_image_auroc": 1.0,
+      "difference": 0.0
+    },
+    {
+      "category": "bottle",
+      "seed": 42,
+      "variant": "spatial_kcenter_r0",
+      "pairwise_image_auroc": 1.0,
+      "difference": 0.0
+    },
+    {
+      "category": "bottle",
+      "seed": 43,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 1.0,
+      "difference": 0.0
+    },
+    {
+      "category": "bottle",
+      "seed": 44,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 1.0,
+      "difference": 0.0
+    },
+    {
+      "category": "screw",
+      "seed": 42,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 0.7962697274031564,
+      "difference": 0.0
+    },
+    {
+      "category": "screw",
+      "seed": 42,
+      "variant": "spatial_random_r3",
+      "pairwise_image_auroc": 0.7003484320557491,
+      "difference": 0.0
+    },
+    {
+      "category": "screw",
+      "seed": 42,
+      "variant": "unrestricted_kcenter",
+      "pairwise_image_auroc": 0.7913506866161099,
+      "difference": 0.0
+    },
+    {
+      "category": "screw",
+      "seed": 42,
+      "variant": "spatial_kcenter_r0",
+      "pairwise_image_auroc": 0.70096331215413,
+      "difference": 0.0
+    },
+    {
+      "category": "screw",
+      "seed": 43,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 0.7948350071736011,
+      "difference": 0.0
+    },
+    {
+      "category": "screw",
+      "seed": 44,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 0.7700348432055749,
+      "difference": 0.0
+    },
+    {
+      "category": "hazelnut",
+      "seed": 42,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 0.9928571428571429,
+      "difference": 0.0
+    },
+    {
+      "category": "hazelnut",
+      "seed": 42,
+      "variant": "spatial_random_r3",
+      "pairwise_image_auroc": 0.9910714285714286,
+      "difference": 0.0
+    },
+    {
+      "category": "hazelnut",
+      "seed": 42,
+      "variant": "unrestricted_kcenter",
+      "pairwise_image_auroc": 0.9953571428571428,
+      "difference": 0.0
+    },
+    {
+      "category": "hazelnut",
+      "seed": 42,
+      "variant": "spatial_kcenter_r0",
+      "pairwise_image_auroc": 0.9892857142857143,
+      "difference": 0.0
+    },
+    {
+      "category": "hazelnut",
+      "seed": 43,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 0.9928571428571429,
+      "difference": 0.0
+    },
+    {
+      "category": "hazelnut",
+      "seed": 44,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 0.9871428571428571,
+      "difference": 0.0
+    },
+    {
+      "category": "metal_nut",
+      "seed": 42,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 0.9970674486803519,
+      "difference": 0.0
+    },
+    {
+      "category": "metal_nut",
+      "seed": 42,
+      "variant": "spatial_random_r3",
+      "pairwise_image_auroc": 0.9931573802541545,
+      "difference": 0.0
+    },
+    {
+      "category": "metal_nut",
+      "seed": 42,
+      "variant": "unrestricted_kcenter",
+      "pairwise_image_auroc": 0.9970674486803519,
+      "difference": 0.0
+    },
+    {
+      "category": "metal_nut",
+      "seed": 42,
+      "variant": "spatial_kcenter_r0",
+      "pairwise_image_auroc": 0.9916911045943304,
+      "difference": 0.0
+    },
+    {
+      "category": "metal_nut",
+      "seed": 43,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 0.9965786901270772,
+      "difference": 0.0
+    },
+    {
+      "category": "metal_nut",
+      "seed": 44,
+      "variant": "spatial_kcenter_r3",
+      "pairwise_image_auroc": 0.9960899315738025,
+      "difference": 0.0
+    }
+  ],
+  "source": "Actual temporary localhost HTTP server; actual released tensors and dataset images.",
+  "note": "Inference timings include preprocessing, backbone and scoring; backend startup and rendering excluded."
+}

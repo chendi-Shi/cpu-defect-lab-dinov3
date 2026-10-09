@@ -1,0 +1,29 @@
+{
+  "category": "metal_nut",
+  "variant": "spatial_kcenter_r0",
+  "seed": 42,
+  "image_auroc": 0.9916911045943304,
+  "pixel_auroc": 0.9760750803822658,
+  "threshold": 2.4329636454582215,
+  "threshold_metrics": {
+    "tp": 92,
+    "fp": 4,
+    "fn": 1,
+    "tn": 18,
+    "precision": 0.9583333333333334,
+    "recall": 0.989247311827957,
+    "f1": 0.9735449735449735
+  },
+  "bank_vectors": 3920,
+  "bank_mib": 5.7421875,
+  "scoring_median_ms": 52.5809999962803,
+  "scoring_p95_ms": 72.23396000335924,
+  "feature_extraction_mean_ms": 557.5392394026032,
+  "coreset_seconds": 0.8524064999946859,
+  "fit_images": 176,
+  "calibration_images": 44,
+  "test_images": 115,
+  "smoke_run": false,
+  "feature_cache_hit": false,
+  "timing_note": "Scoring includes map interpolation; excludes feature extraction, image IO, metrics and drawing."
+}

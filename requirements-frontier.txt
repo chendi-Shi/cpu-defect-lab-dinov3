@@ -1,0 +1,8 @@
+# Keep the already-tested CPU torch/torchvision installation.
+# Install this small add-on set with --no-deps; satisfy missing small runtime
+# dependencies separately. No torch or torchvision packages are listed here.
+# Versions verified against official PyPI metadata, 2026-10-09.
+timm==1.0.30
+safetensors==0.8.0
+# A stable pre-1.0 API release compatible with timm's Hub utilities.
+huggingface-hub==0.36.0

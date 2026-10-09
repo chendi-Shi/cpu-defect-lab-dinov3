@@ -1,0 +1,29 @@
+{
+  "category": "hazelnut",
+  "variant": "spatial_random_r3",
+  "seed": 42,
+  "image_auroc": 0.9910714285714286,
+  "pixel_auroc": 0.991108822735662,
+  "threshold": 3.7105116367340085,
+  "threshold_metrics": {
+    "tp": 63,
+    "fp": 2,
+    "fn": 7,
+    "tn": 38,
+    "precision": 0.9692307692307692,
+    "recall": 0.9,
+    "f1": 0.9333333333333333
+  },
+  "bank_vectors": 6076,
+  "bank_mib": 8.900390625,
+  "scoring_median_ms": 1323.0272499931743,
+  "scoring_p95_ms": 2374.312370005645,
+  "feature_extraction_mean_ms": 792.0051391217953,
+  "coreset_seconds": 1.358965299994452,
+  "fit_images": 313,
+  "calibration_images": 78,
+  "test_images": 110,
+  "smoke_run": false,
+  "feature_cache_hit": false,
+  "timing_note": "Scoring includes map interpolation; excludes feature extraction, image IO, metrics and drawing."
+}
